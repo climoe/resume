@@ -1,0 +1,18 @@
+@reference '../../../tailwind.css';
+
+/* PRINT BUTTON COMPONENT */
+.print {
+    @apply h-[24] w-[32] p-[.5rem_1rem] text-xl text-darkest font-medium cursor-pointer;
+    @apply flex items-center self-center content-center justify-around text-center;
+    @apply invisible text-transparent rounded-[3rem] border border-solid border-purple;
+    @apply data-scrolled:visible data-scrolled:text-darkest;
+}
+
+@page {
+    size: A4;
+    margin: .5in 0 .5in !important;
+}
+
+@page:first {
+    margin-top: 0;
+}

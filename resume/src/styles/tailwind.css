@@ -1,0 +1,287 @@
+/*
+    Base theme definition
+*/
+
+@theme {
+    --color-white: rgba(255, 255, 255, 1);
+    --color-light-grey: rgba(229, 218, 218, 1);
+    --color-grey: rgba(150, 158, 164, 1);
+    --color-dark: rgba(181, 163, 151, 1);
+    --color-darkest: rgba(48, 35, 29, 1);
+    --color-pink: rgb(255 51 204);
+    --color-orange: rgba(255, 102, 51, 100);
+    --color-purple: rgba(121, 59, 238, 1);
+    --color-purple-darker: rgba(80, 26, 150, 1);
+    --color-royal: rgba(56, 172, 245, 1);
+    --color-blue-dark: rgba(41, 14, 151, 1);
+    --color-green-lighter: rgb(129, 254, 113);
+
+    --font-inter: 'Inter', sans-serif;
+    --font-default: 1.4rem;
+
+    --text-xs: 1.2rem;
+    --text-s: 1.6rem;
+    --text-m: 2.4rem;
+    --text-l: 3.6rem;
+    --text-xl: 4.8rem;
+
+    --breakpoint-xl: 93.75em;
+    --breakpoint-lg: 56.25em;
+    --breakpoint-md: 40.625em;
+    --breakpoint-sm: 30em;
+    --breakpoint-xs: 25em;
+    --breakpoint-xxs: 20em;
+
+    --writimg-mode-horizontal-tb: horizontal-tb;
+    --writimg-mode-vertial-lr: vertical-lr;
+    --writimg-mode-sideways-lr: sideways-lr;
+    --writimg-mode-sideways-rl: sideways-rl;
+
+    --text-orientation-sideways: sideways;
+    --text-orientation-upright: upright;
+    --text-orientation-mixed: mixed;
+    --text-orientation-sideways-right: sideways-right;
+
+    --animate-fadein: fade-in 2s ease-in infinite;
+    --animate-fadeout: fade-out 2s ease-out infinite;
+    --animate-openclose: open-close 2s ease-in-out 2s;
+    --animate-movedown: move-down 2s ease-in-out .5s;
+    --animation-quick-rotate: rotate 0.7s ease-in-out 0.5s;
+}
+
+/* DATA ATTRIBUTES CUSTOM VARIANTS */
+@custom-variant data-sticky (&:where([data-sticky=true], [data-sticky=true] *));
+@custom-variant data-scrolled (&:where([data-sticky=true], [data-sticky=true] *));
+
+/* UTILITY FOR WRITING-MODE AND TEXT-ORIENTATION */
+@utility writing-* { writing-mode: --value(--writing-mode-*)}
+@utility orientation-* { text-orientation: --value(--text-orientation-*)}
+
+@layer base {
+
+    html {
+        /* 62,5% * 16px -> 1rem - 10px -*/
+        @apply text-[62.5%] m-[0] p-[0] h-full;
+        @apply xxs:text-[20%] xs:text-[35%] sm:text-[50%] md:text-[62.5%] lg:text-[62.5%] xl:text-[75%];
+        @apply antialiased;
+        @apply font-inter;
+    }
+
+    body {
+        @apply box-border h-full font-inter bg-white;
+    }
+
+    /* KEYFRAMES DEFINITION */
+    @keyframes fade-in {
+        from {
+            background-color: transparent;
+        }
+        to {
+            background-color: var(--color-white);
+        }
+    }
+
+
+    @keyframes fade-out {
+        from {
+            background-color: var(--color-white);
+        }
+        to {
+            background-color: transparent;
+        }
+    }
+
+
+    @keyframes open-close {
+        0% {
+            top: 0;
+            width: 0;
+        }
+
+        5% {
+            width: 0;
+        }
+
+        15% {
+            width: 12rem;
+            text-indent: .8rem;
+        }
+
+        30% {
+            top: 0;
+            width: 12rem;
+        }
+
+        33% {
+            top: 0;
+            width: 0;
+        }
+
+        35% {
+            top: 0;
+            width: 0;
+        }
+
+        38% {
+            top: -4.4rem;
+            width: 0;
+        }
+
+        48% {
+            top: -4.4rem;
+            width: 15rem;
+            text-indent: .8rem;
+        }
+
+        63% {
+            top: -4.4rem;
+            width: 15rem;
+        }
+
+        66% {
+            top: -4.4rem;
+            width: 0;
+        }
+
+        68% {
+            top: -4.4rem;
+            width: 0;
+        }
+
+        71% {
+            top: -8.8rem;
+            width: 0;
+        }
+
+        81% {
+            top: -8.8rem;
+            width: 14rem;
+            text-indent: .8rem;
+        }
+
+        96% {
+            top: -8.8rem;
+            width: 14rem;
+        }
+
+        99% {
+            top: -8.8rem;
+            width: 0;
+            text-indent: .8rem;
+        }
+
+        100% {
+            top: 0;
+            width: 0;
+        }
+    }
+
+    @keyframes move-down {
+        from {
+            transform: translateY(-5rem);
+        }
+        to {
+            transform: translateY(0rem);
+        }
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotateY(360deg);
+        }
+        100% {
+            transform: rotateY(0);
+        }
+    }
+}
+
+/*
+   Components definition of classes
+*/
+
+@layer components  {
+
+    /* HOMEPAGE */
+
+
+
+}
+
+/*!**/
+/*	Shared definitions*/
+/*	of classes used by another*/
+/*	classes*/
+/**!*/
+@layer utilities {
+
+    /* section */
+    .row-flex-section {
+        @apply flex flex-row items-end justify-around m-[1rem_4rem];
+        @apply print:m-[4rem_4rem] print:flex-col;
+    }
+
+    /* section */
+    .column-flex-section {
+        @apply flex flex-col items-center justify-between;
+    }
+
+    /* div */
+    .column-flex-div {
+        @apply flex flex-col items-center justify-between;
+    }
+
+    /* section */
+    .row-flex {
+        @apply flex flex-row items-center justify-around;
+    }
+
+    /* section */
+    .row-flex-center {
+        @apply flex flex-row items-center justify-center;
+    }
+
+    /* section */
+    .row-flex-reverse {
+        @apply flex flex-row-reverse justify-start content-start;
+    }
+
+    /* section */
+    .grid-section {
+        @apply grid grid-cols-[40%_40%] gap-8 justify-items-center justify-center;
+    }
+
+    /* p */
+    .paragraph-small-light {
+        @apply text-s text-darkest font-light text-left m-[0] p-[0];
+    }
+
+    /* p */
+    .paragraph-small {
+        @apply text-s text-darkest font-medium text-left;
+    }
+
+    /* p */
+    .paragraph-large {
+        @apply text-l text-darkest font-medium text-left;
+    }
+
+    /* h4 */
+    .header-4 {
+        @apply text-s text-darkest font-medium text-left;
+    }
+
+    /* h3 */
+    .header-3 {
+        @apply text-m text-darkest font-medium text-left;
+    }
+
+    /* h2 */
+    .header-2 {
+        @apply text-l text-darkest font-medium text-left;
+    }
+
+    /* h1 */
+    .header-1 {
+        @apply text-xl text-darkest font-medium text-left;
+    }
+}

@@ -1,0 +1,67 @@
+@import url('../../../../styles/index.css');
+@reference 'tailwindcss';
+
+
+@layer card-layout {
+
+    .layout-container {
+      @apply h-[160] w-7xl grid place-items-center bg-black rounded-2xl shadow-md z-2 overflow-hidden relative;
+    }
+
+    .layout-cards {
+        @apply h-160 w-7xl p-12 m-auto;
+        @apply grid grid-cols-[repeat(3,1fr)] grid-rows-[repeat(2, 1fr)] gap-12;
+
+        .dim-layer {
+            @apply absolute top-0 left-0 h-full w-full;
+            @apply bg-[rgba(255,255,255,.5)] backdrop-saturate-180 backdrop-blur-lg;
+            @apply opacity-0 pointer-events-none;
+        }
+
+        .opened-card {
+            @apply absolute top-0 right-0 bottom-0 left-0;
+            @apply rounded-[4rem] cursor-pointer z-10;
+            @apply flex justify-center flex-wrap flex-col;
+        }
+
+        .project {
+            @apply h-full w-full m-[0_1rem];
+            @apply rounded-[4rem] bg-white shadow-[0_7_29_0] shadow-[grey];
+
+            &:first-child {
+              @apply ml-[0];
+            }
+        }
+    }
+
+    .card {
+        @apply w-full h-full cursor-pointer;
+        @apply bg-gray-500 rounded-[3rem];
+
+        &:nth-child(1) {
+          @apply col-[1/span_2] row-1;
+        }
+
+        &:nth-child(2) {
+          @apply col-3 row-1;
+        }
+
+        &:nth-child(3) {
+          @apply col-1 row-2;
+        }
+
+        &:nth-child(4) {
+          @apply col-[2/span_2] row-2;
+        }
+    }
+
+    .cards-container {
+        @apply absolute top-0 left-0 w-full h-full max-w-full leading-132
+        @apply whitespace-nowrap overflow-x-scroll scrollbar-none -ms-overflow-style-none;
+
+        &::-webkit-scrollbar {
+            @apply hidden;
+        }
+    }
+}
+

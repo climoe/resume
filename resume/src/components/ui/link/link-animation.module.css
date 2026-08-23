@@ -1,0 +1,26 @@
+@import url('../../../styles/index.css');
+@reference 'tailwindcss';
+
+
+@layer link-animation {
+
+	.link-animation {
+
+		@apply w-full h-full grid place-items-center-center;
+		@apply text-white bg-[#4DA6FF];
+
+		.link-container {
+
+			@apply flex justify-center border-b-3 border-white border-solid cursor-pointer;
+
+			.letter-container {
+
+				@apply relatative text-5xl font-inter w-[1.7rem] h-12 overflow-hidden font-bold
+
+				div {
+					@apply absolute bg-[#4DA6FF] top-0 pointer-events-none;
+				}
+			}
+		}
+	}
+}

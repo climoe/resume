@@ -1,0 +1,35 @@
+import React, { useState } from 'react';
+import { AnimateSharedLayout, motion } from 'framer-motion';
+
+import './menu.module.css';
+
+const menuItems = ['Lorem', 'ipsum', 'dolor', 'sit'];
+
+const MenuItem = ({ text, selected, onClick }) => (
+	<motion.div
+		className='menu-item'
+		onClick={onClick}
+		animate={{ opacity: selected ? 1 : 0.5 }}>
+		{text}
+		{selected && <motion.div className='menu-underline' layoutId='underline' />}
+	</motion.div>
+);
+export const UnderlinedMenu = () => {
+	const [selected, setSelected] = useState(0);
+	return (
+		<div className='underlined-menu'>
+			<div className='menu-wrapper'>
+				<AnimateSharedLayout>
+					{menuItems.map((el, i) => (
+						<MenuItem
+							text={el}
+							key={i}
+							selected={selected === i}
+							onClick={() => setSelected(i)}
+						/>
+					))}
+				</AnimateSharedLayout>
+			</div>
+		</div>
+	);
+};

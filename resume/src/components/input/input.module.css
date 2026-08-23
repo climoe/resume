@@ -1,0 +1,6 @@
+@reference '../../../tailwind.css';
+
+/* DEFAULT INPUT */
+.default-input {
+    @apply font-inter bg-grey leading-[2em] text-[1.4em] m-[.4em_.8em];
+}

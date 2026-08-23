@@ -1,0 +1,1 @@
+// types/images.d.ts

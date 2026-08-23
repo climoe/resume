@@ -1,0 +1,44 @@
+@reference '../../../tailwind.css';
+
+.switch-container {
+
+    @apply items-center h-[24] w-[40] p-[0_2] box-border cursor-pointer;
+    @apply bg-linear-90 from-0% from-pink-700 to-100% to-purple-700 rounded-[10rem];
+    @apply transition-all duration-300;
+    @apply print:hidden;
+
+    &[data-sticky="true"]{
+        @apply flex;
+    }
+    &[data-sticky="false"]{
+        @apply hidden;
+    };
+
+    &[data-darkmode="true"] {
+        @apply bg-gray-800;
+        @apply bg-linear-100 from-0% from-purple-darker via-50% via-[rgba(41,14,151,1)] to-100% to-pink-500;
+
+        .icon {
+            @apply text-purple-darker;
+        }
+    }
+}
+
+.handle {
+
+    @apply w-[20] h-[20] rounded-[50%] bg-white
+    @apply print:hidden;
+
+    &[data-sticky="false"]{
+        @apply hidden;
+    };
+
+    &[data-sticky="true"]{
+        @apply grid;
+    };
+
+}
+
+.icon {
+    @apply text-orange-500 print:hidden;
+}

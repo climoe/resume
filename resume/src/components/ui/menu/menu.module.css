@@ -1,0 +1,25 @@
+@import url('../../../styles/index.css');
+@reference 'tailwindcss';
+
+
+@layer menu {
+    .underlined-menu {
+        @apply h-full w-full grid place-items-center-left text-purple-500 bg-[#ffd11a];
+    }
+
+    .menu-wrapper {
+        @apply flex justify-evenly;
+    }
+
+    .menu-item {
+        @apply relative m-[0_1.5rem] text-5xl font-bold cursor-pointer
+
+        &:first-child {
+            @apply ml-12;
+        }
+    }
+
+    .menu-underline {
+        @apply absolute top-full left-0 w-full h-4 rounded-[3rem] bg-white opacity-85;
+    }
+}

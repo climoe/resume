@@ -1,0 +1,73 @@
+@reference '../../../tailwind.css';
+
+/* EXPERIENCE COMPONENT */
+ul {
+    @apply text-[1.8rem] pl-[0] mt-[0];
+    @apply print:pl-[0] print:mt-[0];
+
+    li {
+        @apply flex text-darkest;
+    }
+
+    time {
+        @apply relative pr-[4] border-r-[.2rem] border-darkest border-solid;
+        @apply text-[1.4rem] font-bold writing-vertical-lr orientation-sideways;
+        @apply print:ml-[0] print:pl-[0] print:pr-[4];
+
+        &::after {
+            @apply content-none absolute z-2 right-0 top-0 translate-x-60% rounded-[50%];
+            @apply bg-darkest border-[.3rem] border-darkest border-solid w-[.5em] h-[.5em];
+        }
+    }
+
+    .company {
+        @apply p-[0_1.5rem_1.5rem_1.5rem] relative;
+
+        &::before {
+            @apply content-none absolute z-1 lwft-0 h-full;
+        }
+    }
+
+    strong {
+        @apply inline-block font-medium;
+    }
+}
+
+/* PROJECT COMPONENT */
+/* section */
+.project {
+    @apply pl-[2] pr-[2] mt-[2];
+    @apply print:break-inside-avoid;
+}
+
+/* h5 */
+.project-name {
+    @apply text-[1.6rem] font-medium mb-[0];
+}
+
+/* h5 */
+.project-position {
+    @apply text-[1.4rem] font-light mb-[0] mt-[.8rem];
+}
+
+/* article */
+.project-details {
+    @apply text-[1.4rem] font-light text-gray;
+}
+
+/* article */
+.project-role {
+    @apply text-[1.4rem] font-light text-gray;
+}
+
+/* p */
+.project-technologies {
+    @apply flex justify-start flex-wrap mt-2 break-inside-avoid;
+    @apply print:break-inside-avoid;
+}
+
+/* TECHNOLOGY COMPONENT */
+.technology {
+    @apply border border-solid border-purple;
+    @apply rounded-2xl text-[1.2rem] font-medium mr-2 mt-2 p-2 leading-[1.6];
+}
