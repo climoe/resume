@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "nextjs": "npm run clear && npm run empty-files && npm run tailwind-cli && npm run css-copy && npm run dev",
-    "clear": "rm -rf ./.next",
+    "clear": "rm -rf ./.next && npm run empty-files",
     "empty-files": "truncate -s 0 ./src/app/globals.css && truncate -s 0 ./dist/styles/globals.css",
     "dev": "next dev",
     "build": "next build",
