@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+@import './tailwind.css';
+@import '../../src/components/button/print/print.module.css';
+@import '../../src/components/button/switch/switch.module.css';
+@import '../../src/components/courses/courses.module.css';
+@import '../../src/components/education/education.module.css';
+@import '../../src/components/experience/experience.module.css';
+@import '../../src/components/footer/footer.module.css';
+@import '../../src/components/hero/hero.module.css';
+@import '../../src/components/identity/identity.module.css';
+@import '../../src/components/input/input.module.css';
+@import '../../src/components/menu/menu.module.css';
+@import '../../src/components/section/section.module.css';
+@import '../../src/components/shared/shared.module.css';
+@import '../../src/components/skills/skills.module.css';
+@import '../../src/components/skills/skills.module.css';
+@import '../../src/components/homepage/hompage.module.css';
+@import '../../src/components/ui/avatar/avatar.module.css';
+@import './shadcn-tailwind.css';
+@import '../../src/components/ui/timeline/timeline.module.css';

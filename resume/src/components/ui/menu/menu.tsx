@@ -5,7 +5,7 @@ import './menu.module.css';
 
 const menuItems = ['Lorem', 'ipsum', 'dolor', 'sit'];
 
-const MenuItem = ({ text, selected, onClick }) => (
+const MenuItem = ({ text, selected, onClick }: {text: string, selected: boolean, onClick: () => void}) => (
 	<motion.div
 		className='menu-item'
 		onClick={onClick}

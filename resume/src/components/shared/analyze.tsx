@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './shared.module.css';
+// import './shared.module.css';
 
-import AnalyzeSvg from '@/public/images/analyze.svg';
+import AnalyzeSvg from '@/src/public/images/analyze.svg';
 
 export default function Analyze() {
 	return (

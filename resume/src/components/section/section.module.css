@@ -1,50 +1,54 @@
-@reference '../../../tailwind.css';
+@reference 'tailwindcss';
+@reference '../../styles/tailwind.css';
 
 /* SECTION COMPONENT*/
-/* section */
-.animated {
-    @apply m-[0];
-    @apply lg:m-[0_0_8];
-    @apply print:m-[0];
+@layer components {
 
-    .controls {
-        @apply flex flex-row items-start justify-around;
-        @apply lg:flex-col;
-    }
-}
+    /* section */
+    .animated {
+        @apply m-[0];
+        @apply lg:m-[0_0_8px];
+        @apply print:m-[0];
 
-/* section */
-.carrier {
-    @apply bg-[src(/src/public/images/splash2.svg)] bg-contain bg-top-right bg-no-repeat;
-    @apply m-[12_8_4];
-    @apply print: bg-white;
-}
-
-/* section */
-.intro {
-    @apply p-[40_0] m-[0_auto];
-    @apply bg-[src(../../public/images/splash.svg)] bg-contain bg-top-right bg-no-repeat;
-    @apply print:bg-white;
-
-    h1 {
-        @apply text-[4.8rem] text-darkest font-medium text-left;
+        .controls {
+            @apply flex flex-row items-start justify-around;
+            @apply lg:flex-col;
+        }
     }
 
-    p {
-        @apply text-[1.2rem] text-darkest font-light text-left p-[0_3rem];
+    /* section */
+    .carrier {
+        @apply bg-[url('../public/images/splash2.svg')] bg-contain bg-top-right bg-no-repeat;
+        @apply m-[12px_8px_4px];
+        @apply print:bg-white;
     }
-}
 
-/* section */
-.vite {
-    @apply flex-[1_0_1/2] flex-col m-[0_4rem] mt-16 p-8 bg-white backdrop-blur-10 rounded-[.8rem];
-    @apply teblet: mt-8 lg:flex-[1_1_100%];
-    @apply print: mt-[0] p-[0];
-    @apply hover: bg-white;
+    /* section */
+    .intro {
+        @apply p-[10rem_0] m-[0_auto];
+        @apply bg-[url('../public/images/splash.svg')] bg-contain bg-top-right bg-no-repeat;
+        @apply print:bg-white;
 
-}
+        h1 {
+            @apply text-[4.8rem] text-darkest font-medium text-left;
+        }
 
-/* h1 */
-.vite-title {
-    @apply mt-4 leading-[1.2] mb-4 text-16 font-medium break-inside-avoid;
+        p {
+            @apply text-[1.2rem] text-darkest font-light text-left p-[0.3rem];
+        }
+    }
+
+    /* section */
+    .vite {
+        @apply flex-[1_0_50%] flex-col m-[0_4rem] mt-[4rem] p-[2rem] bg-white backdrop-blur-xs rounded-[.8rem];
+        @apply lg:mt-[2rem] lg:flex-[1_1_100%];
+        @apply print:mt-[0] print:p-[0];
+        @apply hover:bg-white;
+
+    }
+
+    /* h1 */
+    .vite-title {
+        @apply mt-[1rem] leading-[1.2] mb-[1rem] text-m font-medium break-inside-avoid;
+    }
 }

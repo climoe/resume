@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Technology } from './technology';
 import {ExperienceTechnologyProps} from "@/lib/content-loading/content-types";
-import './experience.module.css'
+// import './experience.module.css'
 
 export const Project = ({ name, position, details, role, technologies }:
 		{name: string, position: string, details: string, role: string, technologies: ExperienceTechnologyProps[]}) => {

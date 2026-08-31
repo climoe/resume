@@ -1,0 +1,19 @@
+@reference 'tailwindcss';
+@reference '../../styles/tailwind.css';
+
+@layer components {
+    /* div */
+    .homepage {
+        @apply relative m-auto max-w-[160rem] text-black z-0 shadow-[0_0.0625rem_0.25rem_0] shadow-[grey];
+        @apply bg-fixed bg-linear-90 from-0% from-white to-100% to-gray-400;
+    }
+    /* main */
+    main {
+        @apply m-0 p-0 w-full h-full bg-white;
+    }
+
+    /* section */
+    .processing-agree {
+        @apply flex content-center justify-center m-[1.5rem_0] text-[1.5rem] italic text-center text-grey;
+    }
+}

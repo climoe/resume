@@ -1,8 +1,8 @@
 import React from 'react';
 
-import  './shared.module.css';
+// import  './shared.module.css';
 
-import ConsultSvg from '@/public/images/consult.svg';
+import ConsultSvg from '@/src/public/images/consult.svg';
 
 export default function Consult() {
 	return (

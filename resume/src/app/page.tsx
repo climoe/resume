@@ -1,6 +1,5 @@
 import React, { Suspense} from 'react';
 
-import  IntroSection  from '@/components/section/intro-section';
 import  CareerSection from '@/components/section/carrier-section';
 import  AnimatedSection  from '@/components/section/animated-section';
 
@@ -16,10 +15,10 @@ import CourseList from '@/components/courses/course-list';
 import Menu from '@/components/menu/menu';
 import Experience from "@/components/experience/experience";
 import  Skills from '@/components/skills/skills';
-import { getAllCourses, getAllEducationEvents, getAllExperiences, getMainTitleData, getPersonalData, getTechnologySkills } from '@/lib/content-loading/content-loading';
+import Timeline from "@/components/ui/timeline/timeline";
+import Hero from "@/components/hero/hero";
 
-import './page.module.css';
-
+import { getAllCourses, getAllEducationEvents, getAllExperiences, getMainTitleData, getPersonalData, getTechnologySkills } from '@/lib/content-loading/content-loading'
 
 export default async function HomePage() {
 	const mainTitle = getMainTitleData();
@@ -32,14 +31,18 @@ export default async function HomePage() {
 	return (
 		<Suspense fallback={<Preloader />}>
 			<div className={'homepage'}>
-				<IntroSection>
-					<section className={"row-flex-section"}>
+				<section className={"intro"}>
+					<section className={'row-flex-section'}>
 						<MainTitle mainTitle={mainTitle} />
 						<Dev />
 					</section>
-				</IntroSection>
+				</section>
 				<Menu />
+				<Hero />
 				<CareerSection>
+					<AnimatedSection>
+						<Timeline/>
+					</AnimatedSection>
 					<AnimatedSection>
 						<Identity identity={personal} />
 					</AnimatedSection>

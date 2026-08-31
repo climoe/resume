@@ -1,10 +1,10 @@
 'use client';
 
-import React, {CSSProperties, JSX, use, useContext} from 'react';
-import Image from 'next/image';
+import React, {JSX, use, useContext} from 'react';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar/avatar";
 import {LanguageContext} from '@/lib/context/language-context';
 
-import './identity.module.css';
+import social from '../../public/images/social.jpg';
 
 import type {
     AboutProps,
@@ -25,22 +25,12 @@ import {
     TwitterLogoIcon
 } from '@phosphor-icons/react';
 
-import social from '@/public/images/social.jpg';
-
 import {CssVarConstant, useCssVar} from "@/lib/utils/use-others";
 
-const imageStyle: CSSProperties = {
-    width: '15rem',
-    height: '15rem',
-    borderRadius: '50%',
-    borderStyle: 'solid',
-    zIndex: 5
-};
-
-const PINK = useCssVar(CssVarConstant.PINK);
-const PURPLE = useCssVar(CssVarConstant.PURPLE);
-
 function Personal({personal, id}: { personal: PersonalProps, id: string }) {
+
+    const PINK = useCssVar(CssVarConstant.PINK);
+
     return (
         <section className={'identity-personal'} id={id}>
             <h2 className={'identity-name'}>
@@ -49,17 +39,15 @@ function Personal({personal, id}: { personal: PersonalProps, id: string }) {
             </h2>
             <div className={"identity-avatar"}>
                 <div className={'identity-avatar-container'}/>
-                <Image
-                    src={social}
-                    style={imageStyle}
-                    alt={'Avatar image'}
-                    loading={'eager'}
-                />
+                <Avatar size={'lg'}>
+                    <AvatarImage src={social.src}/>
+                    <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
             </div>
             <div className={'identity-location'}>
 				<span className={'identity-pin-container'}>
 					<span className={'identity-pin'}>
-						<MapPinAreaIcon size={16} color={PINK}/>
+						<MapPinAreaIcon size={48} color={PINK}/>
 					</span>
 				</span>
                 <span className={'identity-city'}>
@@ -67,11 +55,14 @@ function Personal({personal, id}: { personal: PersonalProps, id: string }) {
 				</span>
             </div>
         </section>
-    );
-};
+    )
+}
 
 
 function Contact({contact, social, accounts}: {contact: ContactProps, social: SocialProps, accounts: AccountProps[]}): JSX.Element {
+
+    const PURPLE = useCssVar(CssVarConstant.PURPLE);
+    const PINK = useCssVar(CssVarConstant.PINK);
 
     const openInNewTab = (url: string) => {
         let newWindow = undefined;
@@ -92,7 +83,7 @@ function Contact({contact, social, accounts}: {contact: ContactProps, social: So
             <p className={'identity-medium'}>
 				<span className={'identity-contact-icon'}>
 					<AtIcon
-                        size={'var(--text-m)'}
+                        size={24}
                         color={PINK}
                         weight='duotone'
                     />
@@ -102,7 +93,7 @@ function Contact({contact, social, accounts}: {contact: ContactProps, social: So
             <p className={'identity-medium'}>
 				<span className={'identity-contact-icon'}>
 					<PhoneCallIcon
-                        size={'var(--text-m)'}
+                        size={24}
                         color={PURPLE}
                         weight='duotone'
                     />
@@ -134,7 +125,6 @@ function Contact({contact, social, accounts}: {contact: ContactProps, social: So
     );
 }
 
-
 function About({about} : { about: AboutProps}): JSX.Element {
     return (
         <div className={'identity-about'}>
@@ -142,7 +132,7 @@ function About({about} : { about: AboutProps}): JSX.Element {
             <h3>{about.content}</h3>
         </div>
     );
-};
+}
 
 
 export default function Identity({

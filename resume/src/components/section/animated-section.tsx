@@ -3,7 +3,8 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation, Variants } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import './section.module.css';
+
+// import './section.module.css';
 
 const squareVariants: Variants = {
 	visible: {
@@ -20,7 +21,7 @@ export default function AnimatedSection({ children } : { children: React.ReactNo
 
 	useEffect(() => {
 		if (inView) {
-			controls.start('visible').then(r => {});
+			controls.start('visible').then(_ => {});
 		}
 	}, [controls, inView]);
 

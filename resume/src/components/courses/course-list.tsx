@@ -7,7 +7,6 @@ import  ViteSection  from '@/components/section/vite-section';
 import  Course  from '@/components/courses/course';
 import { CourseListProps, ReturnProps } from '@/lib/content-loading/content-types';
 
-
 export default function CourseList({
 	courses
 }: {

@@ -5,10 +5,10 @@ import React, { JSX, use, useContext } from 'react';
 import { LanguageContext } from '@/lib/context/language-context';
 
 import  ViteSection  from '@/components/section/vite-section';
-import { SkillRating } from '@/components/skills/skill-rating';
+import { SkillsRating } from '@/components/skills/skills-rating';
 import { ReturnProps, SkillsProps } from '@/lib/content-loading/content-types';
 
-import './skills.module.css';
+// import './skills.module.css';
 
 export default function Skills({
 	skillset
@@ -35,7 +35,7 @@ export default function Skills({
 								<section className={"skills-grid"} key={skill.category}>
 									{skill.items.map((item, index2) => {
 										return (
-											<SkillRating
+											<SkillsRating
 												skillName={item.name}
 												skillRate={item.rate}
 												skillDesc={item.description}

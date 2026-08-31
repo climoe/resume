@@ -1,4 +1,4 @@
-@import url('../../../styles/index.css');
+@reference '../../../styles/index.css';
 @reference 'tailwindcss';
 
 
@@ -15,7 +15,7 @@
 
 			.letter-container {
 
-				@apply relatative text-5xl font-inter w-[1.7rem] h-12 overflow-hidden font-bold
+				@apply relative text-5xl font-inter w-[1.7rem] h-12 overflow-hidden font-bold;
 
 				div {
 					@apply absolute bg-[#4DA6FF] top-0 pointer-events-none;

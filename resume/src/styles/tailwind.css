@@ -1,3 +1,4 @@
+@reference 'tailwindcss';
 /*
     Base theme definition
 */
@@ -8,7 +9,7 @@
     --color-grey: rgba(150, 158, 164, 1);
     --color-dark: rgba(181, 163, 151, 1);
     --color-darkest: rgba(48, 35, 29, 1);
-    --color-pink: rgb(255 51 204);
+    --color-pink: rgb(255,51, 204, 100);
     --color-orange: rgba(255, 102, 51, 100);
     --color-purple: rgba(121, 59, 238, 1);
     --color-purple-darker: rgba(80, 26, 150, 1);
@@ -32,10 +33,10 @@
     --breakpoint-xs: 25em;
     --breakpoint-xxs: 20em;
 
-    --writimg-mode-horizontal-tb: horizontal-tb;
-    --writimg-mode-vertial-lr: vertical-lr;
-    --writimg-mode-sideways-lr: sideways-lr;
-    --writimg-mode-sideways-rl: sideways-rl;
+    --writing-mode-horizontal-tb: horizontal-tb;
+    --writing-mode-vertical-lr: vertical-lr;
+    --writing-mode-sideways-lr: sideways-lr;
+    --writing-mode-sideways-rl: sideways-rl;
 
     --text-orientation-sideways: sideways;
     --text-orientation-upright: upright;
@@ -46,7 +47,8 @@
     --animate-fadeout: fade-out 2s ease-out infinite;
     --animate-openclose: open-close 2s ease-in-out 2s;
     --animate-movedown: move-down 2s ease-in-out .5s;
-    --animation-quick-rotate: rotate 0.7s ease-in-out 0.5s;
+    --animate-rotate: rotate 0.7s ease-in-out 0.5s;
+
 }
 
 /* DATA ATTRIBUTES CUSTOM VARIANTS */
@@ -57,18 +59,56 @@
 @utility writing-* { writing-mode: --value(--writing-mode-*)}
 @utility orientation-* { text-orientation: --value(--text-orientation-*)}
 
+@utility border-ring {
+    border-color:var(--ring)
+
+}
+
+@utility badge {
+
+    height: 1.25rem;
+    gap: .25rem;
+    border-radius: 1rem;
+    padding: 1.25rem .5rem;
+    font-size: 1rem;
+    line-height: .75rem;
+    color: var(--foreground);
+    border: var(--border) 1px solid;
+    @apply transition-all ease-[cubic-bezier(.4,0,.2,1)] duration-150;
+}
+
+
+@utility badge-variant-outline {
+
+    border-color:var(--border);
+    color:var(--foreground);
+
+    @media (hover:hover) {
+        &:is(a):hover {
+            background-color:var(--muted);
+            color:var(--muted-foreground)
+        }
+    }
+}
+
+@utility text-muted-foreground {
+    color:var(--muted-foreground)
+}
+
+
 @layer base {
 
     html {
         /* 62,5% * 16px -> 1rem - 10px -*/
         @apply text-[62.5%] m-[0] p-[0] h-full;
-        @apply xxs:text-[20%] xs:text-[35%] sm:text-[50%] md:text-[62.5%] lg:text-[62.5%] xl:text-[75%];
+        @apply xxs:text-[20%] xs:text-[35%] sm:text-[50%] md:text-[62.5%] lg:text-[62.5%] xl:text-[80%];
         @apply antialiased;
         @apply font-inter;
     }
 
     body {
         @apply box-border h-full font-inter bg-white;
+        @apply text-black;
     }
 
     /* KEYFRAMES DEFINITION */
@@ -195,29 +235,16 @@
     }
 }
 
-/*
-   Components definition of classes
-*/
-
-@layer components  {
-
-    /* HOMEPAGE */
-
-
-
-}
-
-/*!**/
-/*	Shared definitions*/
-/*	of classes used by another*/
-/*	classes*/
-/**!*/
 @layer utilities {
 
     /* section */
     .row-flex-section {
         @apply flex flex-row items-end justify-around m-[1rem_4rem];
-        @apply print:m-[4rem_4rem] print:flex-col;
+
+        @media  print {
+            @apply m-[4rem_4rem] flex-col;
+        }
+
     }
 
     /* section */

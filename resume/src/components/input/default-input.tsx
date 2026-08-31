@@ -1,12 +1,12 @@
 import React from 'react';
 
-import './input.module.css';
+// import './input.module.css';
 
 export default function DefaultInput({
 	onChange,
 	value
 } : {
-	onChange: (event: React.ChangeEvent) => void,
+	onChange: (event: React.ChangeEvent<HTMLInputElement>) => void,
 	value: string
 }) {
 	return (

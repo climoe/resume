@@ -3,13 +3,13 @@ import {CheckCircleIcon, HourglassIcon} from '@phosphor-icons/react';
 
 import {CssVarConstant, useCssVar} from "@/lib/utils/use-others";
 
-
 export default function Course({ name, owner, description, realized } : {name: string, owner: string, description: string, realized: boolean}): JSX.Element {
 
 	const PURPLE = useCssVar(CssVarConstant.PURPLE);
+
 	return (
 		<article className={"course"}>
-			{realized === true ? (
+			{realized ? (
 				<i className={"course-completion"}>
 					<CheckCircleIcon size={'2rem'} color={PURPLE} />
 				</i>

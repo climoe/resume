@@ -2,7 +2,7 @@ type CourseProps = {
   name: string
   description: string
   owner: string
-  realized: string
+  realized: boolean
 }
 
 export type CourseListProps = {

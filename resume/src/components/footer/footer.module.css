@@ -1,20 +1,25 @@
-@reference '../../../tailwind.css';
+@reference 'tailwindcss';
+@reference '../../styles/tailwind.css';
 
 /* FOOTER COMPONENT */
-/* p */
-.copyright {
-    @apply text-center font-medium mt-[0];
-}
+@layer components {
+    /* p */
+    .copyright {
+        @apply inline-block text-center font-medium mt-[0];
+    }
 
-/* p */
-.content-by {
-    @apply text-center font-medium mt-[0];
-}
-/* div */
-.content {
-    @apply max-w-full m-[0_1rem] p-[0_1rem];
-}
-/* div */
-.footer {
-    @apply bg-[src(../../public/images/waves.svg)] bg-cod bg-top-center bg-no-repeat;
+    /* p */
+    .content-by {
+        @apply inline-block text-center font-medium mt-[0];
+    }
+
+    /* div */
+    .content {
+        @apply text-center max-w-full m-[0_1rem] p-[0_1rem];
+    }
+
+    /* div */
+    .footer {
+        @apply bg-[url('../public/images/waves.svg')] bg-cover bg-top-right bg-no-repeat;
+    }
 }

@@ -1,29 +1,26 @@
 'use client';
 
-import React, {ComponentPropsWithRef, useContext, useRef, useState} from 'react';
+import React, {useContext, useRef, useState} from 'react';
 import {useReactToPrint} from 'react-to-print';
 
 import DefaultInput from "@/components/input/default-input";
-import {PrinterIcon} from '@phosphor-icons/react';
 import Header from "@/components/shared/header";
+import LayoutWithRef from "@/components/layout-ref/layout-ref";
+import {PrinterIcon} from '@phosphor-icons/react';
 
 import {CssVarConstant, useCssVar} from "@/lib/utils/use-others";
 import {LanguageContext} from "@/lib/context/language-context";
 
 import "../../globals.css";
 
-function LayoutWithRef(props: ComponentPropsWithRef<'div'>) {
-	return <main {...props}>{props.children}</main>;
-}
+
 
 export function CVLayout({ children }: {children: React.ReactNode}): React.ReactNode {
+
 	const DARK = useCssVar(CssVarConstant.DARK);
-
 	const languageContext = useContext(LanguageContext);
-	const componentRef = useRef<HTMLDivElement>(null);
-
+	const componentRef = useRef<HTMLElement>(null);
 	const [companyName, setCompanyName] = useState('');
-
 	const pageStyle = `
       @page {
         size: A4;
@@ -47,32 +44,34 @@ export function CVLayout({ children }: {children: React.ReactNode}): React.React
 	};
 
 	return (
-		<LanguageContext value={languageContext}>
-			<Header stylesheet={"../../globals.css"} />
-			<section className={'row-flex-center'}>
-				<DefaultInput
-					value={companyName}
-					onChange={handleChangeCompanyName}
-				/>
-				<PrinterIcon
-					size={'4rem'}
-					color={DARK}
-					weight='duotone'
-					onClick={useHandlePrint()}
-				/>
-			</section>
-			<LayoutWithRef ref={componentRef}>
-				{children}
-				<section className={'processing-agree'}>
-					<span>
-						"I consent to the processing by my personal data
-						included in my CV for the purposes of the recruitment
-						process and further recruitment processes"
-					</span>
-				</section>
-			</LayoutWithRef>
-		</LanguageContext>
-
+		<html lang={'en'}>
+			<body>
+				<LanguageContext value={languageContext}>
+					<Header stylesheet={'../../globals.css'}
+							favicon={'../../favicon.svg'}/>
+						<LayoutWithRef ref={componentRef}>
+							<section className={'flex flex-row items-center justify-center'}>
+								<DefaultInput
+									value={companyName}
+									onChange={handleChangeCompanyName}/>
+								<PrinterIcon
+									size={'4rem'}
+									color={DARK}
+									weight='duotone'
+									onClick={useHandlePrint()}/>
+							</section>
+							{children}
+							<section className={'flex content-center justify-center m-[1.5rem_0] text-[1.5rem] italic text-center text-grey'}>
+								<span>
+									"I consent to the processing by my personal data
+									included in my CV for the purposes of the recruitment
+									process and further recruitment processes"
+								</span>
+							</section>
+						</LayoutWithRef>
+				</LanguageContext>
+			</body>
+		</html>
 	);
 }
 export default CVLayout;

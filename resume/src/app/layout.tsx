@@ -1,37 +1,34 @@
 'use client';
 
-import React, { ComponentPropsWithRef, useContext, useRef } from 'react';
+import React, { useContext, useRef } from 'react';
 import { useReactToPrint } from 'react-to-print';
 
 import { LanguageContext } from '@/lib/context/language-context';
 
-import Hero from '@/components/hero/hero';
 import Footer from '@/components/footer/footer';
 import Header from '@/components/shared/header';
+import LayoutWithRef from "@/components/layout-ref/layout-ref";
 
-function LayoutWithRef(props: ComponentPropsWithRef<'div'>) {
-	return <div {...props}>{props.children}</div>;
-}
+import './globals.css';
 
 export default function PageLayout({ children }: React.PropsWithChildren): React.ReactNode {
 	const languageContext = useContext(LanguageContext);
 
-	const componentRef = useRef<HTMLDivElement>(null);
+	const componentRef = useRef<HTMLElement>(null);
 	const pageStyle = `
-    @page {
-      size: A4;
-      margin: .5in 0 .5in !important;
-    }
-
-    @page:first{
-      margin-top: 0;
-    } 
-`;
+		@page {
+		  size: A4;
+		  margin: .5in 0 .5in !important;
+		}
+	
+		@page:first{
+		  margin-top: 0;
+		} 
+	`;
 
 	const handlePrint = useReactToPrint({
 		contentRef: componentRef,
 		pageStyle: pageStyle,
-		//copyStyles: true,
 		documentTitle: 'CV - Kamil Klimczak'
 	});
 
@@ -39,8 +36,8 @@ export default function PageLayout({ children }: React.PropsWithChildren): React
 		<html lang='en'>
 			<body>
 				<LanguageContext value={languageContext}>
-					<Header stylesheet={"./globals.css"}/>
-					<Hero />
+					<Header stylesheet={"./globals.css"}
+							favicon={'./favicon.svg'}/>
 					<LayoutWithRef ref={componentRef}>
 						{children}
 					</LayoutWithRef>

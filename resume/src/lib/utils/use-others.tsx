@@ -1,5 +1,6 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import {useCallback, useEffect, useState} from "react";
 
 export function useCn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
@@ -12,10 +13,6 @@ export function useDateFormat(input: string | number): string {
         day: "numeric",
         year: "numeric",
     });
-}
-
-export function useAbsoluteUrl(path: string) {
-    return `${process.env.NEXT_PUBLIC_APP_URL}${path}`;
 }
 
 export enum CssVarConstant { PINK, ORANGE, ROYAL, PURPLE,DARK, GRAY }
@@ -34,14 +31,18 @@ export function useCssVar(variable: CssVarConstant) : string {
         GRAY: '--color-gray',
     };
 
-    let computedProperty = null;
+    const [property, setProperty] = useState('');
 
-    if (typeof window !== "undefined") {
-        // Client-side-only code
-        const computedStyle = global.getComputedStyle(document.documentElement);
-        computedProperty = computedStyle.getPropertyValue(`${color[variable]}`);
-    }
-    // @ts-ignore
-    return computedProperty;
+    const valueResolver = useCallback(() => {
+        const computedStyle = window.getComputedStyle(document.documentElement);
+        const propertyValue = computedStyle.getPropertyValue(`${color[variable]}`)
+        setProperty(propertyValue)
+    }, [variable]);
+
+    useEffect(() => {
+        valueResolver()
+    }, [property]);
+
+    return property;
 
 }

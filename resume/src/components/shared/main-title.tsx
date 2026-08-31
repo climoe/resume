@@ -5,7 +5,7 @@ import React, { JSX, use, useContext } from 'react';
 import { LanguageContext } from '@/lib/context/language-context';
 import { LanguageProps, ReturnProps } from '@/lib/content-loading/content-types';
 
-import './shared.module.css';
+// import './shared.module.css';
 
 export default function MainTitle({mainTitle}: {mainTitle: Promise<ReturnProps<LanguageProps>>}): JSX.Element {
 	const languageContext = useContext(LanguageContext);

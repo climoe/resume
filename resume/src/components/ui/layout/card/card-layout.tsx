@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import  ViteSection  from '@/components/section/vite-section';
 import './card-layout.module.css';
 
-const cards = [1, 2, 3, 4];
 
 const CardLayout = () => {
-	const [selectedId, setSelectedId] = useState(null);
-	const containerRefs = useRef<HTMLDivElement>(null);
+	const [selectedId, setSelectedId] = useState(0);
+	const containerRefs: any = useRef<HTMLDivElement>(null);
+	const cards = [1, 2, 3, 4];
 
 	return (
 		<div className={'layout-cards'}>
@@ -22,7 +22,7 @@ const CardLayout = () => {
 					layout
 					onClick={() =>
 						selectedId === card
-							? setSelectedId(null)
+							? setSelectedId(0)
 							: setSelectedId(card)
 					}
 					ref={containerRefs.current[card]}>

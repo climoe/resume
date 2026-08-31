@@ -1,0 +1,39 @@
+@reference 'tailwindcss';
+@reference '../../../styles/tailwind.css';
+
+@layer components {
+
+    .avatar {
+        @apply relative flex size-[12rem] shrink-0 rounded-full select-none;
+        @apply after:absolute after:inset-0 after:rounded-full after:box-border after:mix-blend-darken;
+        @apply data-[size=lg]:size-[12rem] data-[size=sm]:size-[6rem];
+        @apply dark:after:mix-blend-lighten;
+    }
+
+    .avatar-image {
+        @apply aspect-square size-full rounded-full object-cover;
+    }
+
+    .avatar-fallback {
+        @apply flex size-full items-center justify-center rounded-full bg-muted;
+        @apply text-sm text-muted-foreground group-data-[size=sm]/avatar:text-xs;
+    }
+
+    .avatar-badge {
+        @apply absolute right-0 bottom-0 z-10 inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground bg-blend-color ring-2 ring-background select-none;
+        @apply group-data-[size=sm]/avatar:size-[1rem] group-data-[size=sm]/avatar:[&>svg]:hidden;
+        @apply group-data-[size=default]/avatar:size-[2rem] group-data-[size=default]/avatar:[&>svg]:size-[2rem];
+        @apply group-data-[size=lg]/avatar:size-[4rem] group-data-[size=lg]/avatar:[&>svg]:size-[4rem];
+    }
+
+    .avatar-group {
+        @apply flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-background;
+    }
+
+    .avatar-group-count {
+        @apply relative flex size-[2rem] shrink-0 items-center justify-center rounded-full;
+        @apply bg-muted text-sm text-muted-foreground ring-2 ring-background;
+        @apply group-has-data-[size=lg]/avatar-group:size-[4rem] group-has-data-[size=sm]/avatar-group:size-[2rem];
+        @apply [&>svg]:size-4 group-has-data-[size=lg]/avatar-group:[&>svg]:size-[4rem] group-has-data-[size=sm]/avatar-group:[&>svg]:size-[2rem];
+    }
+}

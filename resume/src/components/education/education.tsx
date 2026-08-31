@@ -7,8 +7,6 @@ import { LanguageContext } from '@/lib/context/language-context';
 import ViteSection from '@/components/section/vite-section';
 import type { EducationProps, ReturnProps } from '@/lib/content-loading/content-types';
 
-import './education.module.css';
-
 export default function Education({
 	education
 }: {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './shared.module.css';
+// import './shared.module.css';
 
 export const TitleQuestion = () => {
 	return (

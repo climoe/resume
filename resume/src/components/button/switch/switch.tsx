@@ -1,12 +1,10 @@
 'use client';
 
 import React, {JSX, useCallback, useContext, useState } from 'react';
-import './switch.module.css'
-
 import { AnimatePresence, motion } from 'framer-motion';
+
 import { GlobeHemisphereWestIcon, TranslateIcon } from '@phosphor-icons/react';
 import { LanguageContext } from '@/lib/context/language-context';
-
 
 export default function Switch({ sticky } : {sticky: boolean}) : JSX.Element {
 	const [isEn, setIsEn] = useState(true);

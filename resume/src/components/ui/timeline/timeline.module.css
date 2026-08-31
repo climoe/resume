@@ -1,0 +1,143 @@
+@reference 'tailwindcss';
+@reference '../../../styles/tailwind.css';
+@reference '../../../styles/shadcn-tailwind.css';
+
+
+@utility timeline-content-button {
+    @apply border-[.8rem_var(--tw-border-style)] text-[.875rem] leading-3.5;
+    @apply font-medium bg-clip-padding border-1 border-black;
+
+    &:focus-visible {
+        @apply border-[var(--ring)] shadow-gray-600;
+    }
+}
+
+@layer components {
+
+    .timeline-head {
+
+        @apply mb-12 space-y-4 text-center sm:mb-16 lg:m-[0_32rem_6rem];
+
+        .timeline-head-title {
+            @apply text-lg text-center font-semibold md:text-3xl lg:text-lg;
+        }
+
+        .timeline-head-description {
+            @apply text-muted-foreground text-center mx-auto max-w-[30rem] text-lg;
+        }
+    }
+
+    .timeline-elements-list {
+        @apply flex w-full justify-center;
+        @apply max-xl:items-center xl:flex-row xl:items-start max-xl:max-w-full max-sm:flex-row;
+    }
+
+    .timeline-element {
+        @apply flex text-muted-foreground flex-col items-start;
+        @apply xl:flex-col max-sm:gap-4 md:max-xl:flex-1 xl:w-75;
+    }
+
+    .timeline-element-desc {
+        @apply mb-3 flex flex-col max-md:hidden;
+    }
+
+    .timeline-element-desc-heading_title {
+        @apply flex-1 text-wrap text-left text-foreground text-base font-medium;
+        @apply lg:text-lg;
+    }
+
+    .timeline-element-desc-heading_date {
+        @apply text-muted-foreground;
+    }
+
+    .timeline-element-icons {
+        @apply relative flex w-full items-center;
+    }
+
+    .timeline-elements-icons-details {
+        @apply flex items-center justify-center border border-current border-none;
+        @apply [&>:not(:nth-child(4))]:hidden [&>:nth-child(4)]:block transition-colors duration-300;
+        @apply data-[active=true]:bg-primary/10 [&>:not([data-active=true])]:bg-muted size-4.5 rounded-full;
+    }
+
+    .timeline-icon {
+        @apply relative flex w-full items-center size-3;
+    }
+
+    .timeline-icon-check {
+        @apply relative flex w-full items-center;
+        @apply group-data-[active=true]:bg-primary;
+
+    }
+
+    .timeline-icon-circle {
+        @apply relative flex w-full items-center;
+        @apply group-data-[active=true]:bg-primary;
+
+    }
+
+    .timeline-icon-x {
+        @apply relative flex w-full items-center;
+        @apply group-data-[active=true]:bg-primary;
+
+    }
+
+    .timeline-dot {
+        @apply h-[.75rem] w-[.75rem] rounded-[50%];
+        @apply group-data-[active=true]:bg-primary bg-muted-foreground;
+    }
+
+    .timeline-separator {
+        @apply relative flex justify-center overflow-hidden rounded-full;
+        @apply xl:h-0.5 xl:min-h-0 xl:w-full xl:min-w-20 bg-muted h-0.5 w-full max-md:w-40 max-sm:w-20;
+    }
+
+    .timeline-separator-line {
+        @apply bg-primary absolute top-0 left-0 h-full w-full origin-top rounded-full xl:origin-left;
+
+        @media(min-width:1280px) {
+            div.scale-important>div.scale-important {
+                transform:scalex(var(--tw-enter-scale))!important
+            }
+        }
+    }
+
+    .timeline-element-content {
+        @apply w-[120rem] mx-16;
+        @apply flex flex-col items-center;
+
+        .timeline-element-content-desc-container {
+            @apply w-[80rem] rounded-[1.5rem] mt-6 p-2.5 md:mt-8.5 lg:mt-11.5;
+            @apply bg-muted;
+            @apply flex flex-col items-start gap-4;
+
+            .timeline-element-content-desc-container-title {
+                @apply w-[70rem] flex flex-col items-start pl-5 pr-5;
+            }
+        }
+
+        .timeline-element-content-badge-container {
+            @apply bg-background w-[70rem] space-y-5 rounded-[16px] p-5;
+
+            .timeline-element-content-badge-list {
+                @apply flex flex-wrap items-center gap-3;
+
+                .timeline-element-content-badge {
+                    @apply h-[1.5rem] px-[.75rem] py-[.25rem] w-fit;
+                    @apply badge;
+                    @apply inline-flex shrink-0 items-center justify-center;
+                    @apply badge-variant-outline overflow-hidden whitespace-nowrap;
+                    @apply [&>svg]:pointer-events-none;
+                }
+            }
+
+            .timeline-element-content-button {
+                @apply timeline-content-button inline-flex shrink-0 items-center justify-center whitespace-nowrap;
+                @apply transition-all outline-none select-none disabled:pointer-events-none disabled:opacity-50;
+                @apply [&>svg]:pointer-events-none [&>svg]:shrink-0;
+                @apply hover:bg-background dark:hover:border-primary/30 h-9 cursor-pointer gap-2;
+                @apply overflow-hidden rounded-full border-0 px-4! duration-500 hover:shadow-md active:translate-y-0 dark:border dark:border-transparent;
+            }
+        }
+    }
+}

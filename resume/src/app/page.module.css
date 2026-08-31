@@ -1,7 +1,0 @@
-@reference '../tailwind.css';
-
-/* div */
-.homepage {
-    @apply relative m-auto max-w-[560] text-white z-0 shadow-[0_0.0625rem_0.25rem_0] shadow-[grey];
-    @apply bg-fixed bg-linear-315 from-0% from-white to-100% to-grey;
-}

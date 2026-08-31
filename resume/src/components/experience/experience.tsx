@@ -7,7 +7,7 @@ import  ViteSection  from '@/components/section/vite-section';
 import { Project } from '@/components/experience/project';
 import { LanguageContext } from '@/lib/context/language-context';
 import type { ExperienceListProps, ReturnProps } from '@/lib/content-loading/content-types';
-import './experience.module.css';
+// import './experience.module.css';
 
 export default function Experience({
 	experiences

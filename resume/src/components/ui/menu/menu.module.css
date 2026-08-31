@@ -1,4 +1,4 @@
-@import url('../../../styles/index.css');
+@reference '../../../styles/tailwind.css';
 @reference 'tailwindcss';
 
 
@@ -12,7 +12,7 @@
     }
 
     .menu-item {
-        @apply relative m-[0_1.5rem] text-5xl font-bold cursor-pointer
+        @apply relative m-[0_1.5rem] text-5xl font-bold cursor-pointer;
 
         &:first-child {
             @apply ml-12;

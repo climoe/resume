@@ -1,12 +1,8 @@
 import React from 'react';
 
+// import './section.module.css';
 
-interface ViteSectionProps {
-	title: string;
-	id?: string;
-}
-
-export default function ViteSection({id, title, children}: {id: string, title: string,  children: React.ReactNode})  {
+export default function ViteSection({id, title, children}: {id?: string, title: string,  children?: React.ReactNode})  {
 	return (
 		<section className={"vite"} id={id}>
 			<h1 className={"vite-title"}>{title}</h1>

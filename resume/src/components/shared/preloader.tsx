@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Loader from '@/public/images/loader.svg';
-import './shared.module.css';
+import Loader from '@/src/public/images/loader.svg';
+// import './shared.module.css';
 
 const Preloader = () => {
 	return (

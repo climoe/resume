@@ -1,10 +1,11 @@
-@reference '../../../tailwind.css';
+@reference 'tailwindcss';
+@reference '../../styles/tailwind.css';
 
 /* SKILLS COMPONENT */
 /* div */
 .skills {
     @apply break-inside-auto;
-    @apply print: text-[1rem_important];
+    @apply print:text-[1rem]!;
 }
 
 /* section */
@@ -19,8 +20,8 @@
 
 /* h4 */
 .skills-category {
-    @apply text-[1rem] text-gray m-[6_0_0] pl-[4] break-inside-avoid;
-    @apply print: text-[1.2rem] m-[4_0_0] pl-[2];
+    @apply text-[1rem] text-grey m-[1.5rem_0_0] pl-[1rem] break-inside-avoid;
+    @apply print:text-[1.2rem] print:m-[1rem_0_0] print:pl-[.5rem];
 }
 
 /* section */
@@ -28,39 +29,33 @@
     @apply grid grid-cols-5 gap-x-0 gap-y-[.2rem];
     @apply xl:grid-cols-5;
     @apply lg:grid-cols-4;
-    @apply print:grid-cols-6 gap-x-[.2rem] gap-y-[.2rem];
+    @apply print:grid-cols-6 print:gap-x-[.2rem] print:gap-y-[.2rem];
 }
 
 /* p */
 .skills-legend {
     @apply text-[1.2rem] font-light text-grey;
-    @apply print: text-[1rem];
+    @apply print:text-[1rem];
 }
 
 /* article */
 .skills-rating {
-    @apply rounded-[3rem] p-[8_4];
-    @apply print: p-[4_2];
+    @apply rounded-[3rem] p-[2rem_.5rem];
+    @apply print:p-[1rem_.5rem];
 }
 
 /* h5 */
 .skill-name {
-    @apply text-[1.2rem] font-medium m-[0_0_0_1.6];
-    @apply print:text-4 m-[0_0_.8];
+    @apply text-[1.2rem] font-medium m-[0_0_0_1.6rem];
+    @apply print:text-[2rem] m-[0_0_.8rem];
 }
 
-/* p */
+/* span */
+.skills-rating-dots {
+    @apply flex flex-row items-center content-center gap-2;
+}
+
 .skills-description {
-    @apply text-[1.2rem] font-light text-gray m-[0];
+    @apply text-[1.2rem] font-light text-grey m-0;
     @apply print:text-[.8rem];
-}
-
-/* PRINTABLE COMPONENT */
-main {
-    @apply m-[0] p-[0] w-full h-full bg-white;
-}
-
-/* section */
-.processing-agree {
-    @apply flex align-center justify-center m-[1.5rem_0] text-[1.5rem] font-italic text-center text-grey;
 }

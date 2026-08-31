@@ -4,15 +4,19 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "nextjs": "npm run clear && npm run empty-files && npm run tailwind-cli && npm run css-copy && npm run dev",
     "clear": "rm -rf ./.next",
+    "empty-files": "truncate -s 0 ./src/app/globals.css && truncate -s 0 ./dist/styles/globals.css",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "publish": "gh-pages -d public -b source --repo https://git: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@github.com/climoe/climoe.github.io.git",
+    "publish": "gh-pages -d src/public -b source --repo https://git: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@github.com/climoe/climoe.github.io.git",
     "prettier-format": "prettier --write 'src/components/**/*.tsx' 'src/app/**/*.tsx",
-    "prettier-check": "prettier --check 'src/components/**/*.tsx' 'src/app/**/*.tsx"
+    "prettier-check": "prettier --check 'src/components/**/*.tsx' 'src/app/**/*.tsx",
+    "tailwind-cli": "npx @tailwindcss/cli -i ./src/styles/style.css -o ./dist/styles/globals.css",
+    "css-copy": "cp ./dist/styles/globals.css ./src/app/globals.css"
   },
   "keywords": [
     "nextjs",
@@ -27,6 +31,8 @@
     "@phosphor-icons/react": "^2.1.10",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/cli": "^4.1.12",
+    "@tailwindcss/postcss": "^4.3.3",
+    "browser-refresh-taglib": "^1.2.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.42.2",
