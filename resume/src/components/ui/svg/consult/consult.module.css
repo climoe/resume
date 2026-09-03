@@ -1,0 +1,64 @@
+@reference 'tailwindcss';
+
+@layer svgs {
+    
+    .consult-svg-class-1, .consult-svg-class-2 {
+        @apply fill-none stroke-cyan-400 stroke-3;
+    }
+
+    .consult-svg-class-1, .consult-svg-class-3, .consult-svg-class-4, .consult-svg-class-5 {
+        @apply opacity-100;
+    }
+
+    .consult-svg-class-3 {
+        @apply fill-none stroke-white;
+    }
+
+    .consult-svg-class-6 {
+        @apply fill-none stroke-blue-300 stroke-3;
+    }
+
+    .consult-svg-class-7 {
+        @apply opacity-5;
+    }
+
+    .consult-svg-class-8 {
+        @apply fill-none stroke-gray-600;
+    }
+
+    .consult-svg-class-9 {
+        @apply fill-none stroke-white;
+    }
+
+    .consult-svg-class-10 {
+        @apply fill-none stroke-pink-300 stroke-4 opacity-100;
+    }
+
+    .consult-svg-class-11 {
+        @apply fill-none stroke-purple-400;
+    }
+
+    .consult-svg-class-16 {
+        @apply fill-none stroke-purple-200 stroke-3;
+    }
+
+    .consult-svg-class-17 {
+        @apply fill-none stroke-pink-200 stroke-4;
+    }
+
+    .consult-svg-class-18 {
+        @apply fill-purple-400;
+    }
+
+    .consult-svg-class-22 {
+        @apply fill-none stroke-white stroke-3;
+    }
+
+    .consult-svg-class-23 {
+        @apply fill-none stroke-gray-700;
+    }
+
+    .consult-svg-class-24 {
+        @apply fill-none stroke-white stroke-3;
+    }
+}

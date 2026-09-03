@@ -5,11 +5,11 @@ import { TerminalWindowIcon } from '@phosphor-icons/react';
 
 const Hero = () => {
 	return (
-		<div className={'hero'}>
+		<span className={'hero'}>
 			<a className={'logo'} href='/'>
-				<TerminalWindowIcon size={'6.4rem'} />
+				<TerminalWindowIcon size={'2rem'} />
 			</a>
-		</div>
+		</span>
 	);
 };
 

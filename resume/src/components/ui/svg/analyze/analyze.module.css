@@ -1,0 +1,44 @@
+@reference 'tailwindcss';
+
+@layer svgs {
+
+    .analyze-svg-class-1 {
+        @apply fill-none stroke-cyan-400 stroke-3;
+    }
+
+    .analyze-svg-class-2 {
+        @apply fill-none stroke-cyan-400 stroke-3 opacity-100;
+    }
+
+    .analyze-svg-class-3 {
+        @apply fill-none stroke-gray-700 stroke-3;
+    }
+
+    .analyze-svg-class-4, .analyze-svg-class-5 {
+        @apply fill-none stroke-gray-700 stroke-3;
+    }
+
+    .analyze-svg-class-6 {
+        @apply fill-none stroke-pink-400 stroke-3;
+    }
+
+    .analyze-svg-class-7 {
+        @apply opacity-5;
+    }
+
+    .analyze-svg-class-8 {
+        @apply fill-gray-700;
+    }
+
+    .analyze-svg-class-9 {
+        @apply opacity-10;
+    }
+
+    .analyze-svg-class-10 {
+        @apply fill-none stroke-pink-300 stroke-3 opacity-100!;
+    }
+
+    .analyze-svg-class-11, .analyze-svg-class-12, .analyze-svg-class-13 {
+        @apply fill-none stroke-white stroke-3;
+    }
+}

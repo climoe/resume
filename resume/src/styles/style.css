@@ -10,12 +10,14 @@
 @import '../../src/components/hero/hero.module.css';
 @import '../../src/components/identity/identity.module.css';
 @import '../../src/components/input/input.module.css';
-@import '../../src/components/menu/menu.module.css';
 @import '../../src/components/section/section.module.css';
 @import '../../src/components/shared/shared.module.css';
 @import '../../src/components/skills/skills.module.css';
 @import '../../src/components/skills/skills.module.css';
 @import '../../src/components/homepage/hompage.module.css';
-@import '../../src/components/ui/avatar/avatar.module.css';
+/* UI COMPONENTS */
 @import './shadcn-tailwind.css';
+@import '../../src/components/ui/avatar/avatar.module.css';
+@import '../../src/components/ui/base/base.module.css';
 @import '../../src/components/ui/timeline/timeline.module.css';
+@import '../../src/components/ui/navbar/navbar.module.css';

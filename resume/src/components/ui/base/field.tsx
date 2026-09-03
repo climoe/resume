@@ -30,7 +30,7 @@ function FieldLabel({
 	return (
 		<Label
 			data-slot='field-label'
-			className={useCn(
+			className={useCn('group/field-label peer/field-label' +
 				'field-label',
 				className
 			)}
@@ -43,7 +43,7 @@ function FieldContent({ className, ...props }: React.ComponentProps<'div'>) {
 	return (
 		<div
 			data-slot='field-content'
-			className={useCn(
+			className={useCn('group/field-content' +
 				'field-content',
 				className
 			)}
@@ -115,7 +115,7 @@ function FieldGroup({ className, ...props }: React.ComponentProps<'div'>) {
 	return (
 		<div
 			data-slot='field-group'
-			className={useCn(
+			className={useCn('group/field-group @container/field-group' +
 				'field-group',
 				className
 			)}

@@ -24,7 +24,8 @@
       "@/app/*": ["./src/app/*"],
       "@/components/*": ["./src/components/*"],
       "@/lib/*": ["./src/lib/*"],
-      "@/public/*": ["./public/*"]
+      "@/public/*": ["./public/*"],
+      "@/assets/*": ["./src/components/ui/svg/*"]
     }
   },
   "include": [

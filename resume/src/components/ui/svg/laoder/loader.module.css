@@ -1,0 +1,11 @@
+@reference 'tailwindcss';
+
+@layer components {
+    .path {
+        @apply stroke-black;
+    }
+
+    .circle {
+        @apply fill-pink-600;
+    }
+}

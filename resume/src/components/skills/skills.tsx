@@ -23,7 +23,7 @@ export default function Skills({
 			: skill.frontmatter.language.pl;
 
 	return (
-		<ViteSection id='technology' title={description}>
+		<ViteSection id='skills' title={description}>
 			<div className={"skills"}>
 				<section className={"category-grid"}>
 					{skills.map((skill, index1) => {

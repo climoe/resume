@@ -5,7 +5,7 @@ import { useReactToPrint } from 'react-to-print';
 
 import { LanguageContext } from '@/lib/context/language-context';
 
-import Footer from '@/components/footer/footer';
+import Footer from '@/components/ui/footer/footer';
 import Header from '@/components/shared/header';
 import LayoutWithRef from "@/components/layout-ref/layout-ref";
 
@@ -40,8 +40,8 @@ export default function PageLayout({ children }: React.PropsWithChildren): React
 							favicon={'./favicon.svg'}/>
 					<LayoutWithRef ref={componentRef}>
 						{children}
-					</LayoutWithRef>
 					<Footer handlePrint={handlePrint} />
+					</LayoutWithRef>
 				</LanguageContext>
 			</body>
 		</html>

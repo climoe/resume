@@ -1,0 +1,51 @@
+@reference 'tailwindcss';
+
+@layer svgs {
+    .dev-class-1 {
+        @apply fill-none stroke-[url(#a)] stroke-3;
+    }
+
+    .dev-class-2 {
+        @apply fill-none stroke-[#fbbebe] stroke-3;
+    }
+
+    .dev-class-3 {
+        @apply fill-[#464353] stroke-3;
+    }
+
+    .dev-class-4, .dev-class-5 {
+        @apply opacity-0;
+    }
+
+    .dev-class-6 {
+        @apply fill-none stroke-[#6c63ff] stroke-3;
+    }
+
+    .dev-class-7 {
+        @apply opacity-1;
+    }
+
+    .dev-class-8 {
+        @apply fill-[#3f3d56] stroke-3;
+    }
+
+    .dev-class-9 {
+        @apply fill-none stroke-[#fff] stroke-3;
+    }
+
+    .dev-class-10 {
+        @apply opacity-100;
+    }
+
+    .dev-class-11 {
+        @apply fill-none stroke-[#3f3d56] stroke-3
+    }
+
+    .dev-class-12 {
+        @apply fill-none stroke-[#fbbebe] stroke-3;
+    }
+
+    .dev-class-13 {
+        @apply fill-none stroke-[#ff33cc] stroke-3;
+    }
+}

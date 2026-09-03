@@ -1,0 +1,13 @@
+@reference "tailwindcss";
+
+@layer components {
+
+    .heart-red{
+        @apply fill-pink-700;
+    }
+
+    .atom-royal {
+        @apply fill-royal;
+    }
+
+}
