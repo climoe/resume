@@ -5,10 +5,14 @@ const GithubIcon = (props: SVGAttributes<SVGElement>) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            fill="none"
-            viewBox="0 0 256 256"
+            width='24'
+            height='24'
+            viewBox='0 0 24 24'
+            fill='none'
+            stroke='#000000'
+            strokeWidth='2'
+            strokeLinecap='round'
+            strokeLinejoin='round'
             { ...props } >
 
             <path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75

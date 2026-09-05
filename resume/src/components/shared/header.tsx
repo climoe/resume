@@ -12,7 +12,7 @@ export default function Header({stylesheet, favicon}: {stylesheet: string, favic
 				<title>"climoe | IT Software Engineer"</title>
 				<meta name={metadata.name} content={metadata.content}/>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-				<link rel="icon" type="image/svg" href={favicon}/>
+				<link rel="icon" type="image/svg+xml" href={favicon} sizes="any"/>
 				<link rel="stylesheet" href={stylesheet}/>
 			</Head>
 		</>

@@ -36,8 +36,8 @@ export default function PageLayout({ children }: React.PropsWithChildren): React
 		<html lang='en'>
 			<body>
 				<LanguageContext value={languageContext}>
-					<Header stylesheet={"./globals.css"}
-							favicon={'./favicon.svg'}/>
+					<Header stylesheet={"./src/app/globals.css"}
+							favicon={'./src/app/favicon.svg'}/>
 					<LayoutWithRef ref={componentRef}>
 						{children}
 					<Footer handlePrint={handlePrint} />

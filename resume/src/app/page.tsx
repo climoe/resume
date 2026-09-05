@@ -15,7 +15,7 @@ import type { NavigationItem } from '@/components/ui/navbar/navbar';
 
 import Experience from "@/components/experience/experience";
 import Skills from '@/components/skills/skills';
-import Timeline from "@/components/ui/timeline/timeline";
+import TimelinePage from "@/components/ui/timeline/timeline-page";
 
 import { getAllCourses, getAllEducationEvents, getAllExperiences, getPersonalData, getTechnologySkills } from '@/lib/content-loading/content-loading'
 import ChangelogComponentPage from "@/components/ui/layouts/experience/page";
@@ -57,7 +57,7 @@ export default async function HomePage() {
 					<Navbar navigationData={navigationData}/>
 					<ChangelogComponentPage/>
 					<AnimatedSection>
-						<Timeline/>
+						<TimelinePage/>
 					</AnimatedSection>
 					<AnimatedSection>
 						<Identity identity={personal}/>

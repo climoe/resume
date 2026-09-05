@@ -3,11 +3,15 @@
 @layer components {
 
     .heart-red{
-        @apply fill-pink-700;
+        @apply stroke-pink-700;
     }
 
     .atom-royal {
-        @apply fill-royal;
+        @apply stroke-royal;
+    }
+
+    .icon-purple {
+        @apply stroke-purple-500 size-6;
     }
 
 }

@@ -4,10 +4,14 @@ const LinkedinLogo = (props: SVGAttributes<SVGElement>) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            fill="#000000"
-            viewBox="0 0 256 256"
+            width='24'
+            height='24'
+            viewBox='0 0 24 24'
+            fill='none'
+            stroke='#000000'
+            strokeWidth='2'
+            strokeLinecap='round'
+            strokeLinejoin='round'
             { ...props }>
             <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,
                 192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,
