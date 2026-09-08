@@ -653,6 +653,9 @@
   .w-\[50rem\] {
     width: 50rem;
   }
+  .w-\[100rem\] {
+    width: 100rem;
+  }
   .w-auto {
     width: auto;
   }
@@ -667,9 +670,6 @@
   }
   .max-w-3xl {
     max-width: var(--container-3xl, 48rem);
-  }
-  .max-w-4xl {
-    max-width: var(--container-4xl, 56rem);
   }
   .max-w-7xl {
     max-width: var(--container-7xl, 80rem);
@@ -5364,7 +5364,7 @@
   .timeline-elements-list {
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
     @media (width < 93.75em) {
       max-width: 100%;
     }

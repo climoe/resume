@@ -28,7 +28,7 @@
     }
 
     .timeline-elements-list {
-        @apply flex w-full justify-center;
+        @apply flex w-full justify-evenly;
         @apply max-xl:items-center xl:flex-row xl:items-start max-xl:max-w-full max-sm:flex-row;
     }
 

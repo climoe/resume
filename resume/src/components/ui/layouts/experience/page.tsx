@@ -27,7 +27,7 @@ export const releases: Release[] = [
 const ChangelogComponentPage = () => {
     return (
         <div className='flex min-h-screen flex-col'>
-            <div className='mx-auto max-w-4xl px-4 py-10 md:px-8 md:py-16'>
+            <div className='mx-auto w-[100rem] px-4 py-10 md:px-8 md:py-16'>
                 <div className='flex flex-col items-start'>
                     <ChangelogContent releases={releases} />
                 </div>
