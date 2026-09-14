@@ -43,17 +43,17 @@ const TimelineAnimateRow = ({ index, content, isLast, rowRef, indexRef }: Timeli
 
     return (
         <div
-            ref={node => {
-                localRowRef.current = node
-                rowRef(node)
-            }}
-            className={useCn('relative', !isLast && 'pb-10 sm:pb-16')}
-        >
+            ref={
+                node => {
+                    localRowRef.current = node
+                    rowRef(node)
+                }
+            }
+            className={useCn('relative', !isLast && 'pb-10 sm:pb-16')}>
             <motion.div
                 ref={indexRef}
                 style={{ opacity, y }}
-                className='text-muted-foreground absolute left-7 w-fit -translate-x-1/2 px-1 text-center text-lg font-semibold sm:left-9 sm:text-xl'
-            >
+                className='text-muted-foreground absolute left-7 w-fit -translate-x-1/2 px-1 text-center text-lg font-semibold sm:left-9 sm:text-xl'>
                 {index}
             </motion.div>
             <motion.div style={{ opacity, y: contentY }} className='min-w-0 pl-16 sm:pl-20'>
