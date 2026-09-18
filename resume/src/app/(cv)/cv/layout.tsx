@@ -31,10 +31,9 @@ export function CVLayout({ children }: {children: React.ReactNode}): React.React
         margin-top: 0;
       } 
 `;
-	const printRef = useRef<HTMLDivElement>(null);
 	const useHandlePrint = () =>
 		useReactToPrint({
-			contentRef: printRef,
+			contentRef: componentRef,
 			pageStyle: pageStyle,
 			documentTitle: 'CV - Kamil Klimczak'
 		});
@@ -63,7 +62,7 @@ export function CVLayout({ children }: {children: React.ReactNode}): React.React
 							{children}
 							<section className={'flex content-center justify-center m-[1.5rem_0] text-[1.5rem] italic text-center text-grey'}>
 								<span>
-									"I consent to the processing by my personal data
+									"I consent to the processing by ${companyName} my personal data
 									included in my CV for the purposes of the recruitment
 									process and further recruitment processes"
 								</span>

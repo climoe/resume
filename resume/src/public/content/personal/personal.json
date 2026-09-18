@@ -1,0 +1,65 @@
+{
+  "id": "personal",
+  "language": {
+    "pl": {
+      "contact": {
+        "header": "Kontakt",
+        "mail": "klimczak.kamill@gmail.com",
+        "phone": "+48 509-405-890"
+      },
+      "about": {
+        "header": "O mnie",
+        "content": "Senior Java Developer, ostatnio zapalony miłośnik języka Kotlin. Specjalizuje się w tworzeniu aplikacji webowych w technologiach JVM, ale jestem otwarty na rolę fullstack, gdyż nie są mi obce JS/TS oraz React. Interesuje się również szeroko pojętą architekturą systemów oraz rozwiązaniami chmurowymi. Chciałbym być częścią zespołu, którego członkowie motywują się nawzajem i stosują na co dzień dobre praktyki w wytwarzaniu oprogramowania jak DDD czy Clean Architecture. Zdobytej wiedzy nie zostawiam dla siebie, lubię się nią dzielić z innymi. Programowanie uważam nie tylko za moją pracę, ale też jedno z największych zainteresowań."
+      },
+      "personal": {
+        "position": "Web Developer",
+        "name": "Kamil Klimczak",
+        "country": "Poland",
+        "city": "Wrocław"
+      },
+      "social": {
+        "header": "Konta społecznościowe",
+        "accounts": [
+          { "url": "https://www.linkedin.com/in/kamil-k-a21b55157/" },
+          { "url": "https://twitter.com/laserteg" },
+          { "url": "https://dev.to/climoe" },
+          { "url": "https://github.com/climoe" }
+        ]
+      },
+      "sentence": {
+        "header": "Sentencja życiowa",
+        "content": "Nie staraj się porównywać do innych, staraj się mierzyć postęp jaki zrobiłeś od wczoraj!"
+      }
+    },
+    "en": {
+      "contact": {
+        "header": "Contact details",
+        "mail": "klimczak.kamill@gmail.com",
+        "phone": "+48 509-405-890"
+      },
+      "about": {
+        "header": "About me",
+        "content": "Java/Kotlin Developer on my core, recently AI fanboy. Over 13 years of commercial experience in the IT industry. Open to full-stack roles, as familiar with JS/TS and React/Angular. Also interested in widely understood system architecture and creating solutions in the cloud . A professional career goal is to be more experienced everyday using best practices with spread knowledge-sharing. Considering IT engineering not only as a job, but also as one of greatest interests."
+      },
+      "personal": {
+        "position": "Fullstack Developer",
+        "name": "Kamil Klimczak",
+        "country": "Poland",
+        "city": "Wrocław"
+      },
+      "social": {
+        "header": "Social accounts",
+        "accounts": [
+          { "url": "https://www.linkedin.com/in/kamil-k-a21b55157/" },
+          { "url": "https://twitter.com/laserteg" },
+          { "url": "https://dev.to/climoe" },
+          { "url": "https://github.com/climoe" }
+        ]
+      },
+      "sentence": {
+        "header": "Life sentence",
+        "content": "Don't try to compare to others today, compare to progress you've made from yesterday!"
+      }
+    }
+  }
+}

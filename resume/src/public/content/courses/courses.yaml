@@ -54,7 +54,7 @@ language:
       - name: "Kubernetes Maestro"
         description: "from nooby to master in contenerization and orchestration"
         owner: "by wkontenerach.pl"
-        realized: false
+        realized: true
       - name: "Legacy Fighter"
         description: "refactoring legacy projects in modern way with DDD and CQRS patterns"
         owner: "by devstyle.pl"
@@ -62,7 +62,7 @@ language:
       - name: "DNA (acronym of polish - The Way of Modern Architect)"
         description : "advanced agenda about practical raising competences in field of IT architecture"
         owner: "by devstyle.pl"
-        realized: false
+        realized: true
       - name: "AWS - Understand All Services /AWS Certified Developer Associate"
         description: "cross-functional review of amazon's services and preparation for certification at the development level"
         owner: "by szkolachmury.pl"

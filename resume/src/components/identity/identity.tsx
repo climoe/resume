@@ -63,7 +63,7 @@ function Contact({contact, social, accounts}: {contact: ContactProps, social: So
 
     const PURPLE = useCssVar(CssVarConstant.PURPLE);
     const PINK = useCssVar(CssVarConstant.PINK);
-
+    console.log("Accounts: ", accounts)
     const openInNewTab = (url: string) => {
         let newWindow = undefined;
         if (typeof window !== 'undefined') {
@@ -147,10 +147,12 @@ export default function Identity({
         about,
         contact,
         social,
-        accounts
+        accounts,
+        sentence
     } = languageContext.language === 'en'
         ? id.frontmatter.language.en
         : id.frontmatter.language.pl;
+    console.log("Language: ", languageContext.language);
     return (
         <div className={'identity'}>
             <section className={'grid-section'}>

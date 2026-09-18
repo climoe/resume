@@ -8,16 +8,15 @@
         "items": [
           {
             "name": "Java",
-            "rate": 4,
-            "description": "Zaawansowany"
+            "rate": 5,
+            "description": "Ekspert"
           },
           {
             "name": "Kotlin",
             "rate": 4,
             "description": "Zaawansowany"
           },
-          {
-            "name": "SQL",
+          { "name": "SQL",
             "rate": 4,
             "description": "Zaawansowany"
           },
@@ -28,8 +27,8 @@
           },
           {
             "name": "JS/TS",
-            "rate": 3,
-            "description": "Regularny"
+            "rate": 4,
+            "description": "Zaawanasowany"
           }
         ]
       },
@@ -38,13 +37,13 @@
         "items": [
           {
             "name": "Spring",
-            "rate": 4,
-            "description": "Zaawansowany"
+            "rate": 5,
+            "description": "Ekspert"
           },
           {
             "name": "Spring Boot",
-            "rate": 3,
-            "description": "Regularny"
+            "rate": 5,
+            "description": "Ekspert"
           },
           {
             "name": "Hibernate",
@@ -58,8 +57,8 @@
           },
           {
             "name": "MQ/Messaging",
-            "rate": 3,
-            "description": "Regularny"
+            "rate": 4,
+            "description": "Zaawansowany"
           },
           {
             "name": "Apache Camel",
@@ -68,9 +67,8 @@
           },
           {
             "name": "Spring Cloud",
-            "rate": 3,
-            "description": "Regularny"
-          },
+            "rate": 4,
+            "description": "Zaawansowany"                  },
           {
             "name": "ELK",
             "rate": 3,
@@ -78,8 +76,8 @@
           },
           {
             "name": "React",
-            "rate": 3,
-            "description": "Regularny"
+            "rate": 4,
+            "description": "Zaawansowany"
           },
           {
             "name": "Angular 15",
@@ -113,18 +111,18 @@
           },
           {
             "name": "PostgreSQL",
-            "rate": 3,
-            "description": "Regular"
+            "rate": 4,
+            "description": "Zaawanasowany"
           },
           {
             "name": "MongoDB",
-            "rate": 3,
-            "description": "Regularny"
+            "rate": 4,
+            "description": "Zaawanasowany"
           },
           {
             "name": "Redis",
-            "rate": 2,
-            "description": "Początkujący"
+            "rate": 3,
+            "description": "Regularny"
           }
         ]
       },
@@ -136,8 +134,7 @@
             "rate": 4,
             "description": "Zaawansowany"
           },
-          {
-            "name": "FP",
+          { "name": "FP",
             "rate": 3,
             "description": "Regularny"
           }
@@ -147,7 +144,7 @@
         "category": "Architektura",
         "items": [
           {
-            "name": "Czysta/Heksagonalna Architektura",
+            "name": "Architektura Heksagonalna",
             "rate": 4,
             "description": "Zaawansowany"
           },
@@ -160,6 +157,11 @@
             "name": "CQRS",
             "rate": 3,
             "description": "Regularny"
+          },
+          {
+            "name" : "EDA",
+            "rate" : 3,
+            "description" : "Regularny"
           },
           {
             "name": "Mikroserwisy",
@@ -183,13 +185,38 @@
           },
           {
             "name": "Kubernetes",
-            "rate": 2,
-            "description": "Początkujący"
+            "rate": 3,
+            "description": "Regularny"
           },
           {
             "name": "CloudFormation/Terraform",
             "rate": 2,
             "description": "Począttkujący"
+          }
+        ]
+      },
+      {
+        "category": "Narzędzia AI",
+        "items": [
+          {
+            "name": "Claude Code",
+            "rate": 4,
+            "description": "Zaawanasowany"
+          },
+          {
+            "name": "LangChain/LangGraph",
+            "rate": 3,
+            "description": "Regularny"
+          },
+          {
+            "name": "Spring AI",
+            "rate": 3,
+            "description": "Regularny"
+          },
+          {
+            "name": "n8n",
+            "rate": 4,
+            "description": "Zaawansowany"
           }
         ]
       }
@@ -202,10 +229,9 @@
       {
         "category": "Languages",
         "items": [
-          {
-            "name": "Java",
-            "rate": 4,
-            "description": "Advanced"
+          { "name": "Java",
+            "rate": 5,
+            "description": "Expert"
           },
           {
             "name": "Kotlin",
@@ -219,13 +245,11 @@
           },
           {
             "name": "HTML/CSS",
-            "rate": 4,
-            "description": "Advanced"
+            "rate": 4, "description":
+          "Advanced"
           },
           {
-            "name": "JS/TS",
-            "rate": 3,
-            "description": "Regular"
+            "name": "JS/TS", "rate": 3, "description": "Regular"
           }
         ]
       },
@@ -239,8 +263,8 @@
           },
           {
             "name": "Spring Boot",
-            "rate": 3,
-            "description": "Regular"
+            "rate": 4,
+            "description": "Advanced"
           },
           {
             "name": "Hibernate",
@@ -259,8 +283,13 @@
           },
           {
             "name": "JMS/MQ",
-            "rate": 3,
-            "description": "Regular"
+            "rate": 4,
+            "description": "Advanced"
+          },
+          {
+            "name" : "Apache Kafka",
+            "rate" : 4,
+            "description" : "Advanced"
           },
           {
             "name": "Apache Camel",
@@ -279,8 +308,8 @@
           },
           {
             "name": "React",
-            "rate": 3,
-            "description": "Regular"
+            "rate": 4,
+            "description": "Advanced"
           },
           {
             "name": "Angular 15",
@@ -314,8 +343,8 @@
           },
           {
             "name": "PostgreSQL",
-            "rate": 3,
-            "description": "Regular"
+            "rate": 4,
+            "description": "Advanced"
           },
           {
             "name": "MYSQL",
@@ -329,8 +358,8 @@
           },
           {
             "name": "Redis",
-            "rate": 2,
-            "description": "Junior"
+            "rate": 3,
+            "description": "Regular"
           }
         ]
       },
@@ -359,11 +388,16 @@
           },
           {
             "name": "DDD",
+            "rate": 4,
+            "description": "Advanced"
+          },
+          {
+            "name": "CQRS",
             "rate": 3,
             "description": "Regular"
           },
           {
-            "name": "CQRS",
+            "name": "EDA",
             "rate": 3,
             "description": "Regular"
           },
@@ -377,30 +411,39 @@
       {
         "category": "Cloud technologies",
         "items": [
-          {
-            "name": "AWS",
-            "rate": 3,
-            "description": "Regular"
-          },
-          {
-            "name": "Azure",
-            "rate": 2,
-            "description": "Junior"
-          },
-          {
-            "name": "Docker",
-            "rate": 4,
-            "description": "Advanced"
-          },
-          {
-            "name": "Kubernetes",
-            "rate": 3,
-            "description": "Regular"
-          },
+          { "name": "AWS", "rate": 3, "description": "Regular" },
+          { "name": "Azure", "rate": 2, "description": "Junior" },
+          { "name": "Docker", "rate": 4, "description": "Advanced" },
+          { "name": "Kubernetes", "rate": 3, "description": "Regular" },
           {
             "name": "CloudFormation/Terraform",
             "rate": 2,
             "description": "Junior"
+          }
+        ]
+      },
+      {
+        "category": "AI Tools",
+        "items": [
+          {
+            "name": "Claude Code",
+            "rate": 4,
+            "description": "Advanced"
+          },
+          {
+            "name": "LangChain/LangGraph",
+            "rate": 3,
+            "description": "Regular"
+          },
+          {
+            "name": "Spring AI",
+            "rate": 3,
+            "description": "Regular"
+          },
+          {
+            "name": "n8n",
+            "rate": 4,
+            "description": "Advanced"
           }
         ]
       }
