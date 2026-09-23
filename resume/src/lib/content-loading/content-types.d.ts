@@ -113,7 +113,8 @@ export type ContactProps =  {
 }
 
 export type SocialProps = {
-  header: string
+  header: string,
+  accounts: AccountProps[]
 }
 
 export type AccountProps = {
@@ -129,23 +130,21 @@ export type IdentityProps = {
   id: string,
   description: string,
   language: {
-    en: {
-      personal: PersonalProps,
-      about: AboutProps,
-      contact: ContactProps,
-      social: SocialProps,
-      accounts: AccountProps[],
-      sentence: SentenceProps
-    },
     pl: {
       personal: PersonalProps,
       about: AboutProps,
       contact: ContactProps,
       social: SocialProps,
-      accounts: AccountProps[],
+      sentence: SentenceProps
+    },
+    en: {
+      personal: PersonalProps,
+      about: AboutProps,
+      contact: ContactProps,
+      social: SocialProps,
       sentence: SentenceProps
     }
-  },
+  }
 }
 
 export type SkillsProps = {

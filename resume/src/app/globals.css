@@ -6170,11 +6170,12 @@
     max-width: 35rem;
     flex: 2;
     background-color: transparent;
+    align-self: center;
   }
   .logo {
     display: inline-block;
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
     cursor: pointer;
     border-radius: 50%;
     --tw-gradient-position: 90deg;

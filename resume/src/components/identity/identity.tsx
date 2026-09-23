@@ -59,11 +59,10 @@ function Personal({personal, id}: { personal: PersonalProps, id: string }) {
 }
 
 
-function Contact({contact, social, accounts}: {contact: ContactProps, social: SocialProps, accounts: AccountProps[]}): JSX.Element {
+function Contact({contact, social} : {contact: ContactProps, social: SocialProps}): JSX.Element {
 
     const PURPLE = useCssVar(CssVarConstant.PURPLE);
     const PINK = useCssVar(CssVarConstant.PINK);
-    console.log("Accounts: ", accounts)
     const openInNewTab = (url: string) => {
         let newWindow = undefined;
         if (typeof window !== 'undefined') {
@@ -72,10 +71,10 @@ function Contact({contact, social, accounts}: {contact: ContactProps, social: So
         if (newWindow)
             newWindow.opener = null;
     };
-
-    const onClickUrl = (url: string) => {
+    const accounts = social.accounts;
+    function onClickUrl(url: string)  {
         return () => openInNewTab(url);
-    };
+    }
 
     return (
         <section className={'identity-contact'}>
@@ -147,17 +146,15 @@ export default function Identity({
         about,
         contact,
         social,
-        accounts,
         sentence
     } = languageContext.language === 'en'
         ? id.frontmatter.language.en
         : id.frontmatter.language.pl;
-    console.log("Language: ", languageContext.language);
     return (
         <div className={'identity'}>
             <section className={'grid-section'}>
                 <Personal id={'about'} personal={personal}/>
-                <Contact contact={contact} social={social} accounts={accounts}/>
+                <Contact contact={contact} social={social}/>
                 <About about={about}/>
             </section>
         </div>

@@ -34,9 +34,9 @@ const Navbar = ({ navigationData }: { navigationData: NavigationItem }): JSX.Ele
                     <a href='#experience' className='flex-1 hover:text-primary max-md:hidden'>
                         Experience
                     </a>
-                    <span className={'align-self-center hero'}>
+                    <span className={'hero'}>
                         <a className={'logo'} href='/'>
-				            <TerminalWindowIcon size={'2.5rem'} />
+				            <TerminalWindowIcon size={'1rem'} />
 			            </a> climoe/resume
 		            </span>
                     <a href='#education' className='flex-1 hover:text-primary max-md:hidden'>
