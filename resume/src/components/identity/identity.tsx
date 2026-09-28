@@ -8,7 +8,6 @@ import social from '../../public/images/social.jpg';
 
 import type {
     AboutProps,
-    AccountProps,
     ContactProps,
     IdentityProps,
     PersonalProps,
@@ -145,8 +144,7 @@ export default function Identity({
         personal,
         about,
         contact,
-        social,
-        sentence
+        social
     } = languageContext.language === 'en'
         ? id.frontmatter.language.en
         : id.frontmatter.language.pl;
