@@ -87,7 +87,7 @@ function Contact({contact, social} : {contact: ContactProps, social: SocialProps
                         weight='duotone'
                     />
 				</span>
-                {contact.mail}
+                 {contact.mail}
             </p>
             <p className={'identity-medium'}>
 				<span className={'identity-contact-icon'}>
