@@ -27,22 +27,23 @@ const Navbar = ({ navigationData }: { navigationData: NavigationItem }): JSX.Ele
     return (
         <header className='bg-background sticky top-0 z-50' ref={elementRef} data-sticky={isSticky}>
             <div className='mx-auto flex max-w-7xl items-center justify-between gap-8 px-4 py-8 sm:px-6'>
-                <div className='text-muted-foreground flex flex-5 items-center jusify-areound gap-8 font-medium md:justify-center lg:gap-16'>
-                    <a href='#about' className='flex-1 hover:text-primary max-md:hidden'>
+                <div className='text-muted-foreground flex flex-5 items-center justify-around gap-8 font-medium md:justify-center lg:gap-16'>
+                    <a href={'#about'} className='flex-1 hover:text-primary max-md:hidden'>
                         About Me
                     </a>
-                    <a href='#experience' className='flex-1 hover:text-primary max-md:hidden'>
+                    <a href={'#experience'} className='flex-1 hover:text-primary max-md:hidden'>
                         Experience
                     </a>
-                    <span className={'hero'}>
+                    <div className={'hero'}>
                         <a className={'logo'} href='/'>
-				            <TerminalWindowIcon size={'1rem'} />
-			            </a> climoe/resume
-		            </span>
-                    <a href='#education' className='flex-1 hover:text-primary max-md:hidden'>
+				            <TerminalWindowIcon size={'1.5rem'} />
+			            </a>
+                        <span className={'developer'}>climoe</span>
+		            </div>
+                    <a href={'#education'} className='flex-1 hover:text-primary max-md:hidden'>
                         Education
                     </a>
-                    <a href='#skills' className='flex-1 hover:text-primary max-md:hidden'>
+                    <a href={'#skills'} className='flex-1 hover:text-primary max-md:hidden'>
                         Skills
                     </a>
                 </div>

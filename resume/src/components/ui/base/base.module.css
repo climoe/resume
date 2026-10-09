@@ -69,8 +69,9 @@
 
     /* INPUT COMPONENT */
     .resume-input {
-        @apply h-[8px] w-full min-w-[0px] rounded-lg border border-input bg-transparent;
-        @apply px-2.5 py-1 text-base transition-colors outline-none;
+        @apply h-[2rem] w-[20rem] min-w-[0px] rounded-lg border border-input bg-transparent;
+        @apply text-[2rem] text-center;
+        @apply px-[.5rem] py-[.25rem] transition-colors outline-none;
         @apply file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground;
         @apply placeholder:text-muted-foreground;
         @apply focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50;
@@ -78,6 +79,8 @@
         @apply disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50;
         @apply aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20;
         @apply md:text-sm dark:bg-input/30;
+        @apply print:hidden;
+
     }
 
     /* LABEL COMPONENT */

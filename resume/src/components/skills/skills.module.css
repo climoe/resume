@@ -47,7 +47,7 @@
 /* h5 */
 .skill-name {
     @apply text-[1.2rem] font-medium m-[0_0_0_1.6rem];
-    @apply print:text-[2rem] m-[0_0_.8rem];
+    @apply print:text-[.8rem] m-[0_0_.8rem];
 }
 
 /* span */

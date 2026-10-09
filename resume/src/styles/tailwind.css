@@ -272,10 +272,7 @@
         @apply flex flex-row-reverse justify-start content-start;
     }
 
-    /* section */
-    .grid-section {
-        @apply grid grid-cols-[40%_40%] gap-8 justify-items-center justify-center;
-    }
+
 
     /* p */
     .paragraph-small-light {

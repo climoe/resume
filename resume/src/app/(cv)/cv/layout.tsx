@@ -3,15 +3,17 @@
 import React, {useContext, useRef, useState} from 'react';
 import {useReactToPrint} from 'react-to-print';
 
-import DefaultInput from "@/components/input/default-input";
+import Input from "@/components/ui/base/input";
 import Header from "@/components/shared/header";
 import LayoutWithRef from "@/components/layout-ref/layout-ref";
+import Switch from "@/components/button/switch/switch";
 import {PrinterIcon} from '@phosphor-icons/react';
 
 import {CssVarConstant, useCssVar} from "@/lib/utils/use-others";
 import {LanguageContext} from "@/lib/context/language-context";
 
 import "../../globals.css";
+import {Label} from "@/components/ui/base/label";
 
 
 
@@ -50,7 +52,9 @@ export function CVLayout({ children }: {children: React.ReactNode}): React.React
 							favicon={'../../favicon.svg'}/>
 						<LayoutWithRef ref={componentRef}>
 							<section className={'flex flex-row items-center justify-center'}>
-								<DefaultInput
+								<Label>Company Name:</Label>
+								<Input
+									className={'resume-input'}
 									value={companyName}
 									onChange={handleChangeCompanyName}/>
 								<PrinterIcon
@@ -58,6 +62,7 @@ export function CVLayout({ children }: {children: React.ReactNode}): React.React
 									color={DARK}
 									weight='duotone'
 									onClick={useHandlePrint()}/>
+								<Switch sticky={true} languageContext={LanguageContext}/>
 							</section>
 							{children}
 							<section className={'flex content-center justify-center m-[1.5rem_0] text-[1.5rem] italic text-center text-grey'}>

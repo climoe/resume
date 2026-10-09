@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Switch from '@/components/button/switch/switch';
 import CourseList from  '@/components/courses/course-list';
 import Education from '@/components/education/education';
 import Experience from '@/components/experience/experience';
@@ -20,7 +19,6 @@ export default async function CV() {
 
 	return (
 		<>
-			<Switch sticky={true} />
 			<Identity identity={personal} />
 			<Experience experiences={experiences} />
 			<Education education={educations} />

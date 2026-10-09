@@ -4,13 +4,12 @@ import React, {JSX, use, useContext} from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar/avatar";
 import {LanguageContext} from '@/lib/context/language-context';
 
-import social from '../../public/images/social.jpg';
+import socialImage from '../../public/images/social.jpg';
 
 import type {
     AboutProps,
     ContactProps,
     IdentityProps,
-    PersonalProps,
     ReturnProps,
     SocialProps
 } from '@/lib/content-loading/content-types';
@@ -25,37 +24,6 @@ import {
 } from '@phosphor-icons/react';
 
 import {CssVarConstant, useCssVar} from "@/lib/utils/use-others";
-
-function Personal({personal, id}: { personal: PersonalProps, id: string }) {
-
-    const PINK = useCssVar(CssVarConstant.PINK);
-
-    return (
-        <section className={'identity-personal'} id={id}>
-            <h2 className={'identity-name'}>
-                {personal.name}
-                <span> | {personal.position}</span>
-            </h2>
-            <div className={"identity-avatar"}>
-                <div className={'identity-avatar-container'}/>
-                <Avatar size={'lg'}>
-                    <AvatarImage src={social.src}/>
-                    <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
-            </div>
-            <div className={'identity-location'}>
-				<span className={'identity-pin-container'}>
-					<span className={'identity-pin'}>
-						<MapPinAreaIcon size={48} color={PINK}/>
-					</span>
-				</span>
-                <span className={'identity-city'}>
-					{personal.city}, {personal.country}
-				</span>
-            </div>
-        </section>
-    )
-}
 
 
 function Contact({contact, social} : {contact: ContactProps, social: SocialProps}): JSX.Element {
@@ -138,7 +106,9 @@ export default function Identity({
  }: {
     identity: Promise<ReturnProps<IdentityProps>>;
 }): JSX.Element {
+
     const languageContext = useContext(LanguageContext);
+
     const id = use(identity);
     const {
         personal,
@@ -148,13 +118,39 @@ export default function Identity({
     } = languageContext.language === 'en'
         ? id.frontmatter.language.en
         : id.frontmatter.language.pl;
+
+    const PINK = useCssVar(CssVarConstant.PINK);
+
+
     return (
         <div className={'identity'}>
-            <section className={'grid-section'}>
-                <Personal id={'about'} personal={personal}/>
+            <section className={'identity-flex'}>
+                <h2 className={'identity-name'}>
+                    {personal.name}
+                    <span> | {personal.position}</span>
+                </h2>
+                <section className={'identity-personal'}>
+                    <div className={"identity-avatar"}>
+                        <div className={'identity-avatar-container'}/>
+                        <Avatar size={'lg'}>
+                            <AvatarImage src={socialImage.src}/>
+                            <AvatarFallback>CN</AvatarFallback>
+                        </Avatar>
+                    </div>
+                    <div className={'identity-location'}>
+                        <span className={'identity-pin-container'}>
+                            <span className={'identity-pin'}>
+                                <MapPinAreaIcon size={'4rem'} color={PINK}/>
+                            </span>
+                        </span>
+                            <span className={'identity-city'}>
+                            {personal.city}, {personal.country}
+                        </span>
+                    </div>
+                </section>
                 <Contact contact={contact} social={social}/>
-                <About about={about}/>
             </section>
+            <About about={about}/>
         </div>
     );
 }

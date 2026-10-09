@@ -5,8 +5,7 @@
 @layer components {
 
     .switch-container {
-
-        @apply items-center h-[24px] w-[40px] p-[0px_2px] box-border cursor-pointer;
+        @apply items-center h-[3.5rem] w-[5.5rem] p-[_.5rem] box-border cursor-pointer;
         @apply bg-linear-90 from-0% from-pink-700 to-100% to-purple-700 rounded-[10rem];
         @apply transition-all duration-300;
         @apply data-[sticky=true]:flex data-[sticky=false]:hidden;
@@ -23,23 +22,21 @@
     }
 
     .handle {
-
-        @apply w-[20px] h-[20px] rounded-[50%] bg-white;
+        @apply w-[3rem] h-[3rem] rounded-[50%] bg-white;
         @apply print:hidden;
 
         &[data-sticky="false"] {
             @apply hidden;
         }
-    ;
 
         &[data-sticky="true"] {
             @apply grid;
         }
-    ;
 
     }
 
     .icon {
-        @apply text-orange-500 print:hidden;
+        @apply text-orange-500;
+        @apply print:hidden;
     }
 }
