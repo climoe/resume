@@ -5,8 +5,12 @@ import { Button } from '@/components/ui/button/button'
 
 import {AtomIcon, LinkedinLogoIcon, AtIcon, XLogoIcon, GithubLogoIcon, HeartIcon, PrinterIcon} from "@phosphor-icons/react";
 import { JSX } from "react";
+import {useCssVar} from "@/lib/utils/use-others";
 
 const Footer = ({ handlePrint }: { handlePrint: () => void}) => {
+
+    const PURPLE = useCssVar('PURPLE')
+    const ROYAL = useCssVar('ROYAL')
 
     type Socials = {
         label: string,
@@ -14,15 +18,15 @@ const Footer = ({ handlePrint }: { handlePrint: () => void}) => {
     }[]
 
     const socials: Socials = [
-        { label: 'GitHub', component: (<GithubLogoIcon size={32} color={'#000000'}/>) },
-        { label: 'Email', component: (<AtIcon size={32} color={'#000000'}/>) },
-        { label: 'LinkedIn', component: (<LinkedinLogoIcon size={32} color={'#000000'}/>) },
-        { label: 'X', component: (<XLogoIcon size={32} color={'#000000'}/>) }
+        { label: 'GitHub', component: (<GithubLogoIcon size={40} color={useCssVar('DARK')}/>) },
+        { label: 'Email', component: (<AtIcon size={40} color={useCssVar('PURPLE')}/>) },
+        { label: 'LinkedIn', component: (<LinkedinLogoIcon size={40} color={useCssVar('ROYAL')}/>) },
+        { label: 'X', component: (<XLogoIcon size={40} color={useCssVar('DARK')}/>) }
     ]
 
     return (
-        <footer className='py-8 sm:py-16 lg:py-24'>
-            <div className='mx-auto max-w-7xl space-y-12 px-4 sm:px-6 lg:px-8'>
+        <footer className='footer-main'>
+            <div className='footer-separator-bar'>
                 <div className='flex items-center gap-3'>
                     <Separator className='flex-1' />
                     <div className='flex items-center gap-3'>
@@ -35,19 +39,17 @@ const Footer = ({ handlePrint }: { handlePrint: () => void}) => {
                     <Separator className={'flex-1'}/>
                 </div>
             </div>
-            <div className='mx-auto w-5xl space-around justify-center align-items-center px-4 py-8 sm:px-6'>
-                <p className='w-[50rem] flex flex-3 font-medium justify-center align-self-center gap-2'>
-                    <a className=' flex-1 hover:underline'>
-                        {`©${new Date().getFullYear()}`}  climoe
-                    </a>
-                    <span className={'flex-1 w-[30rem] inline-flex justify-center align-self-center gap-1'}>
-                        Made with <AtomIcon size={24} color={'#38ACF5FF'} className={'atom-royal'}/> and <HeartIcon color={'#501A96FF'} size={24} /> for better web.
-                    </span>
-                    <PrinterIcon
-                        size={'2rem'}
-                        className={'flex-1 stroke-pink-500'}
-                        onClick={handlePrint}/>
-                </p>
+            <div className='footer-info'>
+                <span className='footer-copyright'>
+                    {`©${new Date().getFullYear()}`} climoe
+                </span>
+                <span className={'footer-tech'}>
+                    <span>Made with<AtomIcon size={'2rem'} color={ROYAL}/></span>
+                    <span>and <HeartIcon size={'2rem'} color={PURPLE}/>for better web.</span>
+                </span>
+                <PrinterIcon id={'printer'}
+                    size={'2rem'}
+                    onClick={handlePrint}/>
             </div>
         </footer>
     )

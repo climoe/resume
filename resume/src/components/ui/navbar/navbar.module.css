@@ -3,6 +3,19 @@
 
 @layer components {
 
+    /* header */
+    .navbar {
+        @apply w-[120rem] bg-background sticky top-0 z-50;
+    }
+
+    .menu {
+        @apply mx-auto flex max-w-7xl items-center justify-between gap-8 px-4 py-8 sm:px-6;
+    }
+
+    .navbar-items {
+        @apply text-muted-foreground flex flex-5 items-center justify-around gap-8 font-medium md:justify-center lg:gap-16;
+    }
+
     /* div */
     .hero {
         @apply flex flex-1 gap-x-6 max-w-[35rem] bg-transparent items-start;

@@ -6,24 +6,33 @@
 
 @layer components {
 
+    /* div */
+    .identity {
+        @apply w-[100rem] mt-16;
+        @apply flex flex-row flex-2 gap-x-60;
+        @apply print:m-[0] print:p-[0];
+    }
+
     /* section */
-    .identity-flex {
-        @apply flex gap-x-[1rem] items-center justify-center;
+    .identity-info {
+        @apply w-[30rem] ml-[20rem];
+        @apply flex flex-col flex-1 gap-y-[.25rem] items-start justify-start;
         @apply mb-[8rem];
-    }
 
-    /* section */
-    .identity-personal {
-        @apply w-[34rem] gap-y-[2rem] flex flex-col items-center justify-between;
-    }
+        /* h2 */
+        .identity-name {
+            @apply w-[30rem] mb-[2rem] text-[2.5rem] text-darkest font-black text-center;
+            @apply justify-self-center self-baseline;
 
-    /* h2 */
-    .identity-name {
-        @apply w-[30rem] text-l text-darkest font-black text-center justify-self-center;
-        @apply pr-[4rem];
+            span {
+                @apply inline-block font-light;
+            }
+        }
 
-        .span {
-            @apply inline-block font-light;
+        /* section */
+        .identity-personal {
+            @apply w-[34rem] gap-y-[2rem];
+            @apply flex flex-col items-center justify-between self-center;
         }
     }
 
@@ -34,35 +43,35 @@
 
     /* div */
     .identity-avatar-container {
-        @apply absolute top-0 right-0 bottom-0 left-0 w-[12rem] rounded-[50%] bg-linear-90 from-pink from-0% to-purple to-100% z-[-1] translate-x-1/10;
+        @apply absolute top-0 right-0 bottom-0 left-0 w-[12rem] rounded-[50%] bg-linear-90 from-[#FF33CCFF] from-0% to-[#6C63FF] to-100% z-[-1] translate-x-1/10;
     }
 
     /* div */
     .identity-location {
-        @apply inline-flex flex-col gap-y-0 w-auto;
-    }
+        @apply inline-flex flex-row gap-y-0 gap-x-0 w-auto;
 
-    /* span */
-    .identity-pin-container {
-        @apply h-[3.5rem] self-center;
-    }
+        /* span */
+        .identity-pin {
+            @apply h-[4rem] self-end bg-darkest;
+            @apply inline;
+            svg {
+                @apply fill-[#6c63ff];
+            }
+        }
 
-    /* span */
-    .identity-pin {
-        @apply block;
-    }
+        /* span */
+        .identity-city {
+            @apply text-[2rem] w-[17.5rem] justify-center self-center;
+            @apply text-white font-medium p-[0.5rem_1.25rem_0.5rem_0.5rem];
+            @apply bg-darkest mt-[1.25rem];
+        }
 
-    /* span */
-    .identity-city {
-        @apply text-[2rem] w-[17.5rem] justify-center self-center;
-        @apply text-white font-medium p-[0.5rem_1.25rem_0.5rem_0.5rem];
-        @apply bg-darkest mt-[1.25rem];
     }
 
     /* section */
     .identity-contact {
         @apply text-2xl;
-        @apply flex flex-col self-start justify-center items-center;
+        @apply flex flex-col flex-1 gap-8 self-start justify-center items-center;
 
         h2 {
             @apply font-black self-center;
@@ -73,20 +82,29 @@
         }
     }
 
-    /* span */
-    .identity-contact-icon {
-        @apply inline-flex;
-    }
 
     /* p */
     .identity-medium {
         @apply text-2xl;
         @apply self-center inline-flex;
+
+        /* span */
+        .identity-contact-icon {
+            @apply inline-flex;
+
+            svg {
+                @apply fill-[#6c63ff];
+            }
+        }
     }
 
     /* section */
     .identity-accessibility {
         @apply flex flex-row items-center justify-between self-center text-center;
+
+        svg {
+            @apply fill-[#6c63ff];
+        }
     }
 
     /* div */
@@ -102,11 +120,5 @@
             @apply text-4xl text-center;
             @apply font-black mt-4;
         }
-    }
-
-    /* div */
-    .identity {
-        @apply block mt-16;
-        @apply print:m-[0] print:p-[0];
     }
 }

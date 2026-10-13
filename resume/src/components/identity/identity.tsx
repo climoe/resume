@@ -23,13 +23,13 @@ import {
     TwitterLogoIcon
 } from '@phosphor-icons/react';
 
-import {CssVarConstant, useCssVar} from "@/lib/utils/use-others";
+import {useCssVar} from "@/lib/utils/use-others";
 
 
 function Contact({contact, social} : {contact: ContactProps, social: SocialProps}): JSX.Element {
 
-    const PURPLE = useCssVar(CssVarConstant.PURPLE);
-    const PINK = useCssVar(CssVarConstant.PINK);
+    const PURPLE = useCssVar('PURPLE');
+    const PINK = useCssVar('PINK');
     const openInNewTab = (url: string) => {
         let newWindow = undefined;
         if (typeof window !== 'undefined') {
@@ -119,17 +119,18 @@ export default function Identity({
         ? id.frontmatter.language.en
         : id.frontmatter.language.pl;
 
-    const PINK = useCssVar(CssVarConstant.PINK);
+    const PINK = useCssVar('PINK');
 
 
     return (
-        <div className={'identity'}>
-            <section className={'identity-flex'}>
-                <h2 className={'identity-name'}>
+        <>
+            <div className={'identity'}>
+                <section className={'identity-info'}>
+                    <h2 className={'identity-name'}>
                     {personal.name}
                     <span> | {personal.position}</span>
                 </h2>
-                <section className={'identity-personal'}>
+                    <section className={'identity-personal'}>
                     <div className={"identity-avatar"}>
                         <div className={'identity-avatar-container'}/>
                         <Avatar size={'lg'}>
@@ -138,19 +139,18 @@ export default function Identity({
                         </Avatar>
                     </div>
                     <div className={'identity-location'}>
-                        <span className={'identity-pin-container'}>
                             <span className={'identity-pin'}>
-                                <MapPinAreaIcon size={'4rem'} color={PINK}/>
+                                <MapPinAreaIcon size={'4rem'} fill={PINK}/>
                             </span>
-                        </span>
                             <span className={'identity-city'}>
                             {personal.city}, {personal.country}
                         </span>
                     </div>
                 </section>
+                </section>
                 <Contact contact={contact} social={social}/>
-            </section>
+            </div>
             <About about={about}/>
-        </div>
+        </>
     );
 }

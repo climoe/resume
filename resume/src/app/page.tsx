@@ -55,10 +55,6 @@ export default async function HomePage() {
 			<div className={'homepage'}>
 				<CareerSection>
 					<Navbar navigationData={navigationData}/>
-					<ChangelogComponentPage/>
-					<AnimatedSection>
-						<TimelinePage/>
-					</AnimatedSection>
 					<AnimatedSection>
 						<Identity identity={personal}/>
 					</AnimatedSection>

@@ -9,7 +9,7 @@ import LayoutWithRef from "@/components/layout-ref/layout-ref";
 import Switch from "@/components/button/switch/switch";
 import {PrinterIcon} from '@phosphor-icons/react';
 
-import {CssVarConstant, useCssVar} from "@/lib/utils/use-others";
+import { useCssVar} from "@/lib/utils/use-others";
 import {LanguageContext} from "@/lib/context/language-context";
 
 import "../../globals.css";
@@ -19,7 +19,7 @@ import {Label} from "@/components/ui/base/label";
 
 export function CVLayout({ children }: {children: React.ReactNode}): React.ReactNode {
 
-	const DARK = useCssVar(CssVarConstant.DARK);
+	const DARK = useCssVar('DARK');
 	const languageContext = useContext(LanguageContext);
 	const componentRef = useRef<HTMLElement>(null);
 	const [companyName, setCompanyName] = useState('');

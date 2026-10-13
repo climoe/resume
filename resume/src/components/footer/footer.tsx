@@ -1,12 +1,12 @@
 import React from 'react';
 import {AtomIcon, HeartStraightIcon, PrinterIcon} from '@phosphor-icons/react';
 
-import {CssVarConstant, useCssVar} from "@/lib/utils/use-others";
+import {useCssVar} from "@/lib/utils/use-others";
 
 export const Footer = ({ handlePrint }: { handlePrint: () => void}) => {
 
-	const PINK = useCssVar(CssVarConstant.PINK)
-	const ROYAL = useCssVar(CssVarConstant.ROYAL)
+	const PINK = useCssVar('PINK')
+	const ROYAL = useCssVar('ROYAL')
 
 	return (
 		<div className={"footer"}>

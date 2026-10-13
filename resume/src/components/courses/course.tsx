@@ -1,11 +1,11 @@
 import React, {JSX} from 'react';
 import {CheckCircleIcon, HourglassIcon} from '@phosphor-icons/react';
 
-import {CssVarConstant, useCssVar} from "@/lib/utils/use-others";
+import {useCssVar} from "@/lib/utils/use-others";
 
 export default function Course({ name, owner, description, realized } : {name: string, owner: string, description: string, realized: boolean}): JSX.Element {
 
-	const PURPLE = useCssVar(CssVarConstant.PURPLE);
+	const PURPLE = useCssVar('PURPLE');
 
 	return (
 		<article className={"course"}>

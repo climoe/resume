@@ -1,11 +1,11 @@
 import React from 'react';
 import {CircleWavyIcon} from '@phosphor-icons/react';
-import {CssVarConstant, useCssVar,} from "@/lib/utils/use-others";
+import {useCssVar} from "@/lib/utils/use-others";
 
 export const SkillsRatingDots = ({ range } : { range: number}) => {
 
-	const PINK = useCssVar(CssVarConstant.PINK);
-	const GRAY = useCssVar(CssVarConstant.GRAY);
+	const PURPLE = useCssVar('PURPLE');
+	const GRAY = useCssVar('GRAY');
 
 	return (
 		<span className={'skills-rating-dots'}>
@@ -13,7 +13,7 @@ export const SkillsRatingDots = ({ range } : { range: number}) => {
 				return (
 					<CircleWavyIcon
 						size={'1rem'}
-						color={PINK}
+						color={PURPLE}
 						weight='duotone'
 						key={index}
 					/>

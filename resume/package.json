@@ -4,10 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "nextjs": "npm run clear && npm run tailwind-cli && npm run css-copy && npm run dev",
+    "dev": "clear && npm run clear && npm run tailwind-cli && npm run css-copy && next dev",
     "clear": "rm -rf ./.next && npm run empty-files",
     "empty-files": "truncate -s 0 ./src/app/globals.css && truncate -s 0 ./dist/styles/globals.css",
-    "dev": "next dev",
+    "next": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",

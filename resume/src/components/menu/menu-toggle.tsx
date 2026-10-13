@@ -2,7 +2,7 @@ import * as React from 'react';
 import {JSX} from 'react';
 import {UserCircleIcon} from '@phosphor-icons/react';
 
-import {CssVarConstant, useCssVar} from "@/lib/utils/use-others";
+import {useCssVar} from "@/lib/utils/use-others";
 
 export default function MenuToggle({
 	toggle,
@@ -12,7 +12,7 @@ export default function MenuToggle({
 	scrolled: boolean;
 }): JSX.Element {
 
-	const DARK = useCssVar(CssVarConstant.DARK)
+	const DARK = useCssVar('DARK')
 
 	return (
 		<button className={"toggle"} data-scrolled={scrolled} onClick={toggle}>

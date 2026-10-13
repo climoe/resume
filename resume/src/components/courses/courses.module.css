@@ -6,7 +6,7 @@
 @layer components {
     /*  article  */
     .course {
-        @apply flex text-[1.2rem] font-medium items-end;
+        @apply flex text-[1.2rem] font-medium items-start;
         @apply print:break-inside-avoid;
     }
 

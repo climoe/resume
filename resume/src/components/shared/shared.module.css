@@ -48,10 +48,11 @@
     }
 
     .preloader {
-        @apply flex w-screen h-screen justify-center content-center;
+        @apply fixed top-0 left-0 w-screen h-screen z-999;
+        @apply flex justify-center items-center content-center;
 
         div {
-            @apply w-[10rem] h-[5rem];
+            @apply w-[50rem] h-[25rem];
         }
     }
 

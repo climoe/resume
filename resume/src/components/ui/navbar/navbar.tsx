@@ -2,17 +2,10 @@
 
 import React, {JSX, useRef} from 'react';
 
-import { Button } from '@/components/ui/button/button'
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuGroup,
-    DropdownMenuItem,
-    DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu/dropdown-menu'
-
 import useSticky from "@/lib/utils/use-sticky";
-import {ListIcon, MagnifyingGlassIcon, TerminalWindowIcon} from "@phosphor-icons/react";
+import LanguageContext from "@/lib/context/language-context";
+import Switch from "@/components/button/switch/switch";
+import {TerminalWindowIcon} from "@phosphor-icons/react";
 
 
 export type NavigationItem = {
@@ -25,9 +18,9 @@ const Navbar = ({ navigationData }: { navigationData: NavigationItem }): JSX.Ele
     const isSticky: boolean = useSticky(elementRef);
 
     return (
-        <header className='bg-background sticky top-0 z-50' ref={elementRef} data-sticky={isSticky}>
-            <div className='mx-auto flex max-w-7xl items-center justify-between gap-8 px-4 py-8 sm:px-6'>
-                <div className='text-muted-foreground flex flex-5 items-center justify-around gap-8 font-medium md:justify-center lg:gap-16'>
+        <header className={'navbar'} ref={elementRef} data-sticky={isSticky}>
+            <div className={'menu'}>
+                <div className={'navbar-items'}>
                     <a href={'#about'} className='flex-1 hover:text-primary max-md:hidden'>
                         About Me
                     </a>
@@ -49,25 +42,7 @@ const Navbar = ({ navigationData }: { navigationData: NavigationItem }): JSX.Ele
                 </div>
 
                 <div className='flex items-center gap-6'>
-                    <Button variant='ghost' size='icon'>
-                        <MagnifyingGlassIcon />
-                        <span className='sr-only'>Search</span>
-                    </Button>
-                    <DropdownMenu>
-                        <DropdownMenuTrigger className='md:hidden'>
-                            <ListIcon />
-                            <span className='sr-only'>Menu</span>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent className='w-56' align='end'>
-                            <DropdownMenuGroup>
-                                {navigationData.map((item, index) => (
-                                    <DropdownMenuItem key={index}>
-                                        <a href={item.href}>{item.title}</a>
-                                    </DropdownMenuItem>
-                                ))}
-                            </DropdownMenuGroup>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
+                    <Switch sticky={true} languageContext={LanguageContext}/>
                 </div>
             </div>
         </header>
