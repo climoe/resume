@@ -15,10 +15,8 @@ import type { NavigationItem } from '@/components/ui/navbar/navbar';
 
 import Experience from "@/components/experience/experience";
 import Skills from '@/components/skills/skills';
-import TimelinePage from "@/components/ui/timeline/timeline-page";
 
 import { getAllCourses, getAllEducationEvents, getAllExperiences, getPersonalData, getTechnologySkills } from '@/lib/content-loading/content-loading'
-import ChangelogComponentPage from "@/components/ui/layouts/experience/page";
 
 export default async function HomePage() {
 	const courses = getAllCourses();
@@ -54,7 +52,7 @@ export default async function HomePage() {
 		<Suspense fallback={<Preloader/>}>
 			<div className={'homepage'}>
 				<CareerSection>
-					<Navbar navigationData={navigationData}/>
+					<Navbar />
 					<AnimatedSection>
 						<Identity identity={personal}/>
 					</AnimatedSection>

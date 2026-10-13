@@ -13,7 +13,7 @@ export type NavigationItem = {
     href: string
 }[]
 
-const Navbar = ({ navigationData }: { navigationData: NavigationItem }): JSX.Element => {
+const Navbar = (): JSX.Element => {
     const elementRef = useRef<HTMLElement>(null);
     const isSticky: boolean = useSticky(elementRef);
 
