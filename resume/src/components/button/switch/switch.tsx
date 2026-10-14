@@ -1,22 +1,21 @@
 'use client';
 
-import React, {Context, JSX, useCallback, useContext, useState} from 'react';
+import React, {JSX, use, useState} from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import { GlobeHemisphereWestIcon, TranslateIcon } from '@phosphor-icons/react';
-import {LanguageContext, LanguageContextProps} from '@/lib/context/language-context'
+import {LanguageContext} from '@/lib/context/language-context'
 
-export default function Switch({ sticky = true, languageContext} : { sticky: boolean, languageContext: Context<LanguageContextProps> }) : JSX.Element {
+export default function Switch({ sticky = true} : { sticky: boolean}) : JSX.Element {
 	const [isEn, setIsEn] = useState(true);
-	const context = useContext(languageContext);
+	const context = use(LanguageContext);
 
-	const toggleSwitch = useCallback(() => {
+	const toggleSwitch = () => {
 		setIsEn(!isEn);
-		context.switch(context.language);
-	}, [isEn]);
+		context?.toggle();
+	};
 
 	return (
-		<LanguageContext value={context}>
 		<div
 			role={'button'}
 			className={'switch-container'}
@@ -34,19 +33,18 @@ export default function Switch({ sticky = true, languageContext} : { sticky: boo
 					<motion.i
 						className={'icon'}
 						key={isEn ? 'en' : 'pl'}
-						initial={{ y: -30, opacity: 0 }}
-						animate={{ y: 0, opacity: 1 }}
-						exit={{ y: 30, opacity: 0 }}
-						transition={{ duration: 0.2 }}>
+						initial={{opacity: 0}}
+						animate={{opacity: 1}}
+						exit={{opacity: 0}}
+						transition={{ duration: 0.025 }}>
 						{isEn ? (
-							<GlobeHemisphereWestIcon size={'2.8rem'} />
+							<GlobeHemisphereWestIcon size={'2.5rem'} />
 						) : (
-							<TranslateIcon size={'2.8rem'} />
+							<TranslateIcon size={'2.5rem'} />
 						)}
 					</motion.i>
 				</AnimatePresence>
 			</motion.div>
 		</div>
-		</LanguageContext>
 	);
 };

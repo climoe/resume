@@ -13,28 +13,32 @@
     .footer-info {
         @apply w-[45rem] font-medium mx-auto px-4 py-8 sm:px-6;
         @apply content-around justify-center items-center;
-        @apply flex flex-row justify-around self-center gap-8;
+        @apply flex flex-col justify-around self-center gap-8;
 
         .footer-copyright {
-            @apply w-[10rem];
-            @apply flex-2 hover:underline justify-self-center;
+            @apply w-[30rem];
+            @apply flex flex-2 hover:underline justify-self-center content-center;
+        }
+
+        .footer-rights {
+            @apply flex-5 text-right;
         }
 
         .footer-tech {
             @apply w-[30rem];
-            @apply flex-5 inline-flex justify-center self-center gap-2 content-baseline;
+            @apply flex-2 inline-flex justify-center self-center gap-2 content-baseline;
 
            svg {
                 @apply inline align-middle flex-2 justify-around gap-2;
            }
         }
 
-        svg#printer {
+        .footer-printer {
+            @apply inline mr-[5rem] flex-1;
+
             path {
                 @apply fill-[#ff33cc];
-
             }
-            @apply mr-[3rem] flex-1;
         }
     }
 }

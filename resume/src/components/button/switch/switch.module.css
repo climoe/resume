@@ -16,13 +16,13 @@
             @apply bg-linear-100 from-0% from-purple-darker via-50% via-[rgba(41,14,151,1)] to-100% to-pink-500;
 
             .icon {
-                @apply text-purple-darker;
+                @apply text-purple;
             }
         }
     }
 
     .handle {
-        @apply w-[3rem] h-[3rem] rounded-[50%] bg-white;
+        @apply w-[2.6rem] h-[2.6rem] rounded-[50%] bg-white;
         @apply print:hidden;
 
         &[data-sticky="false"] {
@@ -36,7 +36,7 @@
     }
 
     .icon {
-        @apply text-orange-500;
+        @apply text-pink-700;
         @apply print:hidden;
     }
 }

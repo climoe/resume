@@ -40,16 +40,14 @@ const Footer = ({ handlePrint }: { handlePrint: () => void}) => {
                 </div>
             </div>
             <div className='footer-info'>
-                <span className='footer-copyright'>
-                    {`©${new Date().getFullYear()}`} climoe
-                </span>
                 <span className={'footer-tech'}>
                     <span>Made with<AtomIcon size={'2rem'} color={ROYAL}/></span>
                     <span>and <HeartIcon size={'2rem'} color={PURPLE}/>for better web.</span>
                 </span>
-                <PrinterIcon id={'printer'}
-                    size={'2rem'}
-                    onClick={handlePrint}/>
+                <span className='footer-copyright'>
+                    <span className={'footer-rights'}>{`©${new Date().getFullYear()}`}climoe. All rights reserved.</span>
+                    <PrinterIcon className={'footer-printer'} size={'2rem'} onClick={handlePrint}/>
+                </span>
             </div>
         </footer>
     )

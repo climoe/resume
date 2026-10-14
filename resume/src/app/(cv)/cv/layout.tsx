@@ -1,6 +1,6 @@
 'use client';
 
-import React, {useContext, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {useReactToPrint} from 'react-to-print';
 
 import Input from "@/components/ui/base/input";
@@ -10,7 +10,7 @@ import Switch from "@/components/button/switch/switch";
 import {PrinterIcon} from '@phosphor-icons/react';
 
 import { useCssVar} from "@/lib/utils/use-others";
-import {LanguageContext} from "@/lib/context/language-context";
+import LanguageProvider from "@/lib/context/language-context";
 
 import "../../globals.css";
 import {Label} from "@/components/ui/base/label";
@@ -19,10 +19,9 @@ import {Label} from "@/components/ui/base/label";
 
 export function CVLayout({ children }: {children: React.ReactNode}): React.ReactNode {
 
-	const DARK = useCssVar('DARK');
-	const languageContext = useContext(LanguageContext);
+	const PURPLE = useCssVar('PURPLE');
 	const componentRef = useRef<HTMLElement>(null);
-	const [companyName, setCompanyName] = useState('');
+	const [companyName, setCompanyName] = useState<string>('');
 	const pageStyle = `
       @page {
         size: A4;
@@ -47,33 +46,31 @@ export function CVLayout({ children }: {children: React.ReactNode}): React.React
 	return (
 		<html lang={'en'}>
 			<body>
-				<LanguageContext value={languageContext}>
-					<Header stylesheet={'../../globals.css'}
-							favicon={'../../favicon.svg'}/>
+				<LanguageProvider>
+					<Header stylesheet={'../../globals.css'}/>
 						<LayoutWithRef ref={componentRef}>
 							<section className={'flex flex-row items-center justify-center'}>
-								<Label>Company Name:</Label>
+								<Label className={'mr-[2rem]'}>Company Name:</Label>
 								<Input
 									className={'resume-input'}
 									value={companyName}
 									onChange={handleChangeCompanyName}/>
-								<PrinterIcon
+								<PrinterIcon className={'ml-[2rem]'}
 									size={'4rem'}
-									color={DARK}
-									weight='duotone'
+									color={PURPLE}
 									onClick={useHandlePrint()}/>
-								<Switch sticky={true} languageContext={LanguageContext}/>
+								<Switch sticky={true}/>
 							</section>
 							{children}
 							<section className={'flex content-center justify-center m-[1.5rem_0] text-[1.5rem] italic text-center text-grey'}>
 								<span>
-									"I consent to the processing by ${companyName} my personal data
+									I consent to the processing by {companyName} my personal data
 									included in my CV for the purposes of the recruitment
-									process and further recruitment processes"
+									process and further recruitment processes
 								</span>
 							</section>
 						</LayoutWithRef>
-				</LanguageContext>
+				</LanguageProvider>
 			</body>
 		</html>
 	);

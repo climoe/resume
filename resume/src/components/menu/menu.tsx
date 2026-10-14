@@ -28,7 +28,7 @@ export default function Menu () : JSX.Element{
 			<li>
 				<Link href='/#courses' title='Courses' />
 			</li>
-			<Switch sticky={isSticky} />
+			<Switch sticky={isSticky}/>
 		</nav>
 	);
 };

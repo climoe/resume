@@ -3,7 +3,6 @@
 import React, {JSX, useRef} from 'react';
 
 import useSticky from "@/lib/utils/use-sticky";
-import LanguageContext from "@/lib/context/language-context";
 import Switch from "@/components/button/switch/switch";
 import {TerminalWindowIcon} from "@phosphor-icons/react";
 
@@ -42,7 +41,7 @@ const Navbar = (): JSX.Element => {
                 </div>
 
                 <div className='flex items-center gap-6'>
-                    <Switch sticky={true} languageContext={LanguageContext}/>
+                    <Switch sticky={true}/>
                 </div>
             </div>
         </header>

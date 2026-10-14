@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useContext, useRef } from 'react';
+import React, { useRef } from 'react';
 import { useReactToPrint } from 'react-to-print';
 
-import { LanguageContext } from '@/lib/context/language-context';
+import LanguageProvider from '@/lib/context/language-context';
 
 import Footer from '@/components/ui/footer/footer';
 import Header from '@/components/shared/header';
@@ -12,8 +12,6 @@ import LayoutWithRef from "@/components/layout-ref/layout-ref";
 import './globals.css';
 
 export default function PageLayout({ children }: React.PropsWithChildren): React.ReactNode {
-	const languageContext = useContext(LanguageContext);
-
 	const componentRef = useRef<HTMLElement>(null);
 	const pageStyle = `
 		@page {
@@ -35,14 +33,13 @@ export default function PageLayout({ children }: React.PropsWithChildren): React
 	return (
 		<html lang='en'>
 			<body>
-				<LanguageContext value={languageContext}>
-					<Header stylesheet={"./src/app/globals.css"}
-							favicon={'./src/app/favicon.svg'}/>
+				<LanguageProvider>
+					<Header stylesheet={"./src/app/globals.css"}/>
 					<LayoutWithRef ref={componentRef}>
 						{children}
 					<Footer handlePrint={handlePrint} />
 					</LayoutWithRef>
-				</LanguageContext>
+				</LanguageProvider>
 			</body>
 		</html>
 	);

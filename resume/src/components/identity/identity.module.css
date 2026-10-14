@@ -70,7 +70,7 @@
 
     /* section */
     .identity-contact {
-        @apply text-2xl;
+        @apply text-2xl leading-[3];
         @apply flex flex-col flex-1 gap-8 self-start justify-center items-center;
 
         h2 {
@@ -118,7 +118,7 @@
 
         h2 {
             @apply text-4xl text-center;
-            @apply font-black mt-4;
+            @apply font-black mt-4 mb-8;
         }
     }
 }
