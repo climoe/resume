@@ -1,6 +1,6 @@
 'use client';
 
-import React, { JSX, use, useContext } from 'react';
+import React, { JSX, use } from 'react';
 
 import { LanguageContext } from '@/lib/context/language-context';
 import { LanguageProps, ReturnProps } from '@/lib/content-loading/content-types';
@@ -8,10 +8,10 @@ import { LanguageProps, ReturnProps } from '@/lib/content-loading/content-types'
 // import './shared.module.css';
 
 export default function MainTitle({mainTitle}: {mainTitle: Promise<ReturnProps<LanguageProps>>}): JSX.Element {
-	const languageContext = useContext(LanguageContext);
+	const context = use(LanguageContext);
 	const title = use(mainTitle);
 	const { first, second } =
-		languageContext.language === 'en'
+		context?.value === 'en'
 			? title.frontmatter.language.en
 			: title.frontmatter.language.pl;
 

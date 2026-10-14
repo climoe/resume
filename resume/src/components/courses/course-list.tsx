@@ -1,6 +1,6 @@
 'use client';
 
-import React, { JSX, use, useContext } from 'react';
+import React, { JSX, use } from 'react';
 
 import { LanguageContext } from '@/lib/context/language-context';
 import  ViteSection  from '@/components/section/vite-section';
@@ -12,10 +12,10 @@ export default function CourseList({
 }: {
 	courses: Promise<ReturnProps<CourseListProps>>
 }): JSX.Element {
-	const languageContext = useContext(LanguageContext);
+	const context = use(LanguageContext);
 	const c = use(courses);
 	const { label, items } =
-		languageContext.language === 'en'
+		context?.value === 'en'
 			? c.frontmatter.language.en
 			: c.frontmatter.language.pl;
 

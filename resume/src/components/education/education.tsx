@@ -1,6 +1,6 @@
 'use client';
 
-import React, { JSX, use, useContext } from 'react';
+import React, { JSX, use } from 'react';
 import { motion } from 'framer-motion';
 
 import { LanguageContext } from '@/lib/context/language-context';
@@ -12,10 +12,10 @@ export default function Education({
 }: {
 	education: Promise<ReturnProps<EducationProps>>;
 }): JSX.Element {
-	const languageContext = useContext(LanguageContext);
+	const context = use(LanguageContext);
 	const edu = use(education);
 	const { title, events } =
-		languageContext.language === 'en'
+		context?.value === 'en'
 			? edu.frontmatter.language.en
 			: edu.frontmatter.language.pl;
 	return (

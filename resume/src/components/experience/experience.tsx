@@ -1,6 +1,6 @@
 'use client';
 
-import React, { JSX, use, useContext } from 'react';
+import React, { JSX, use } from 'react';
 import { motion } from 'framer-motion';
 
 import  ViteSection  from '@/components/section/vite-section';
@@ -14,10 +14,10 @@ export default function Experience({
 }: {
 	experiences: Promise<ReturnProps<ExperienceListProps>>;
 }): JSX.Element {
-	const languageContext = useContext(LanguageContext);
+	const context = use(LanguageContext);
 	const exp = use(experiences);
 	const { label, experience } =
-		languageContext.language === 'en'
+		context?.value === 'en'
 			? exp.frontmatter.language.en
 			: exp.frontmatter.language.pl;
 

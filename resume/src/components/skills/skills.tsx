@@ -1,6 +1,6 @@
 'use client';
 
-import React, { JSX, use, useContext } from 'react';
+import React, { JSX, use } from 'react';
 
 import { LanguageContext } from '@/lib/context/language-context';
 
@@ -15,10 +15,10 @@ export default function Skills({
 }: {
 	skillset: Promise<ReturnProps<SkillsProps>>;
 }): JSX.Element {
-	const languageContext = useContext(LanguageContext);
+	const context = use(LanguageContext);
 	const skill = use(skillset);
 	const { description, legend, skills } =
-		languageContext.language === 'en'
+		context?.value === 'en'
 			? skill.frontmatter.language.en
 			: skill.frontmatter.language.pl;
 

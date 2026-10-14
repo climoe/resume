@@ -1,6 +1,6 @@
 'use client';
 
-import React, {JSX, use, useContext} from 'react';
+import React, {JSX, use} from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar/avatar";
 import {LanguageContext} from '@/lib/context/language-context';
 
@@ -107,7 +107,7 @@ export default function Identity({
     identity: Promise<ReturnProps<IdentityProps>>;
 }): JSX.Element {
 
-    const languageContext = useContext(LanguageContext);
+    const context = use(LanguageContext);
 
     const id = use(identity);
     const {
@@ -115,7 +115,7 @@ export default function Identity({
         about,
         contact,
         social
-    } = languageContext.language === 'en'
+    } = context?.value === 'en'
         ? id.frontmatter.language.en
         : id.frontmatter.language.pl;
 
