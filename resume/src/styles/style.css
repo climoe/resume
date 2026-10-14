@@ -12,7 +12,6 @@
 @import '../../src/components/section/section.module.css';
 @import '../../src/components/shared/shared.module.css';
 @import '../../src/components/skills/skills.module.css';
-@import '../../src/components/skills/skills.module.css';
 @import '../../src/components/homepage/hompage.module.css';
 /* UI COMPONENTS */
 @import './shadcn-tailwind.css';

@@ -33,10 +33,10 @@ export default function Switch({ sticky = true} : { sticky: boolean}) : JSX.Elem
 					<motion.i
 						className={'icon'}
 						key={isEn ? 'en' : 'pl'}
-						initial={{opacity: 0}}
-						animate={{opacity: 1}}
-						exit={{opacity: 0}}
-						transition={{ duration: 0.025 }}>
+						initial={{x: -10, opacity: 0}}
+						animate={{x: 0, opacity: 1}}
+						exit={{x: -10,  opacity: 0}}
+						transition={{ duration: 0.025}}>
 						{isEn ? (
 							<GlobeHemisphereWestIcon size={'2.5rem'} />
 						) : (
