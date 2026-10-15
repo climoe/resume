@@ -39,10 +39,12 @@ const Navbar = (): JSX.Element => {
                         Skills
                     </a>
                 </div>
-
                 <div className='flex items-center gap-6'>
                     <Switch sticky={true}/>
                 </div>
+                <a href={'/cv'} className={'hover:text-primary max-md:hidden'}>
+                    CV
+                </a>
             </div>
         </header>
     )

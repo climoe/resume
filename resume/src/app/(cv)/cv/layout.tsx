@@ -50,12 +50,12 @@ export function CVLayout({ children }: {children: React.ReactNode}): React.React
 					<Header stylesheet={'../../globals.css'}/>
 						<LayoutWithRef ref={componentRef}>
 							<section className={'flex flex-row items-center justify-center'}>
-								<Label className={'mr-[2rem]'}>Company Name:</Label>
+								<Label className={'mr-[2rem] text-[1.5rem] print:hidden'}>Company Name:</Label>
 								<Input
 									className={'resume-input'}
 									value={companyName}
 									onChange={handleChangeCompanyName}/>
-								<PrinterIcon className={'ml-[2rem]'}
+								<PrinterIcon className={'ml-[2rem] text-[2rem] print:hidden'}
 									size={'4rem'}
 									color={PURPLE}
 									onClick={useHandlePrint()}/>

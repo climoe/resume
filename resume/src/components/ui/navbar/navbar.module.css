@@ -14,7 +14,7 @@
     }
 
     .navbar-items {
-        @apply text-muted-foreground flex flex-5 items-center justify-around gap-8 font-medium md:justify-center lg:gap-16;
+        @apply text-muted-foreground flex flex-6 items-center justify-around gap-8 font-medium md:justify-center lg:gap-16;
     }
 
     /* div */

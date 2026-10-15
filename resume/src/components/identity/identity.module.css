@@ -10,7 +10,7 @@
     .identity {
         @apply w-[100rem] mt-16;
         @apply flex flex-row flex-2 gap-x-60;
-        @apply print:m-[0] print:p-[0];
+        @apply print:m-[0] print:p-[0] print:w-[60rem];
     }
 
     /* section */
@@ -18,11 +18,14 @@
         @apply w-[30rem] ml-[20rem];
         @apply flex flex-col flex-1 gap-y-[.25rem] items-start justify-start;
         @apply mb-[8rem];
+        @apply print:w-[20rem] print:ml-[15rem];
+
 
         /* h2 */
         .identity-name {
             @apply w-[30rem] mb-[2rem] text-[2.5rem] text-darkest font-black text-center;
             @apply justify-self-center self-baseline;
+            @apply print:w-[15rem];
 
             span {
                 @apply inline-block font-light;
@@ -33,6 +36,7 @@
         .identity-personal {
             @apply w-[34rem] gap-y-[2rem];
             @apply flex flex-col items-center justify-between self-center;
+            @apply print:w-[17rem];
         }
     }
 
@@ -54,6 +58,8 @@
         .identity-pin {
             @apply h-[4rem] self-end bg-darkest;
             @apply inline;
+            @apply print:bg-darkest;
+
             svg {
                 @apply fill-[#6c63ff];
             }
@@ -64,6 +70,7 @@
             @apply text-[2rem] w-[17.5rem] justify-center self-center;
             @apply text-white font-medium p-[0.5rem_1.25rem_0.5rem_0.5rem];
             @apply bg-darkest mt-[1.25rem];
+            @apply print:bg-darkest;
         }
 
     }

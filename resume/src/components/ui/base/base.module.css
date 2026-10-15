@@ -70,7 +70,7 @@
     /* INPUT COMPONENT */
     .resume-input {
         @apply h-[2rem] w-[20rem] min-w-[0px] rounded-lg border border-input bg-transparent;
-        @apply text-[2rem] text-center;
+        @apply text-[3rem] text-center;
         @apply px-[.5rem] py-[.25rem] transition-colors outline-none;
         @apply file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground;
         @apply placeholder:text-muted-foreground;
