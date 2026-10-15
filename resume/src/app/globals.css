@@ -989,6 +989,9 @@
   .text-\[1\.5rem\] {
     font-size: 1.5rem;
   }
+  .text-\[2rem\] {
+    font-size: 2rem;
+  }
   .leading-4\.5 {
     --tw-leading: calc(var(--spacing, 0.25rem) * 4.5);
     line-height: calc(var(--spacing, 0.25rem) * 4.5);
@@ -2334,6 +2337,11 @@
       }
     }
   }
+  .print\:hidden {
+    @media print {
+      display: none;
+    }
+  }
   .data-open\:bg-accent {
     &:where([data-state="open"]), &:where([data-open]:not([data-open="false"])) {
       background-color: var(--color-accent, var(--accent));
@@ -3392,12 +3400,15 @@
       margin: 0;
     }
     @media print {
+      width: 60rem;
+    }
+    @media print {
       padding: 0;
     }
   }
   .identity-info {
     margin-left: 20rem;
-    width: 30rem;
+    width: 34rem;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -3405,9 +3416,15 @@
     justify-content: flex-start;
     row-gap: .25rem;
     margin-bottom: 8rem;
+    @media print {
+      margin-left: 12rem;
+    }
+    @media print {
+      width: 17rem;
+    }
     .identity-name {
       margin-bottom: 2rem;
-      width: 30rem;
+      width: 34rem;
       text-align: center;
       font-size: 2.5rem;
       --tw-font-weight: var(--font-weight-black, 900);
@@ -3415,6 +3432,9 @@
       color: var(--color-darkest, rgba(48, 35, 29, 1));
       align-self: baseline;
       justify-self: center;
+      @media print {
+        width: 25rem;
+      }
       span {
         display: inline-block;
         --tw-font-weight: var(--font-weight-light, 300);
@@ -3429,12 +3449,18 @@
       align-items: center;
       justify-content: space-between;
       align-self: center;
+      @media print {
+        width: 17rem;
+      }
     }
   }
   .identity-avatar {
     position: relative;
     display: inline-block;
     justify-self: center;
+    @media print {
+      margin-left: 5rem;
+    }
   }
   .identity-avatar-container {
     position: absolute;
@@ -3465,11 +3491,17 @@
     flex-direction: row;
     column-gap: calc(var(--spacing, 0.25rem) * 0);
     row-gap: calc(var(--spacing, 0.25rem) * 0);
+    @media print {
+      margin-left: 6rem;
+    }
     .identity-pin {
       height: 4rem;
       align-self: flex-end;
       background-color: var(--color-darkest, rgba(48, 35, 29, 1));
       display: inline;
+      @media print {
+        background-color: var(--color-darkest, rgba(48, 35, 29, 1));
+      }
       svg {
         fill: #6c63ff;
       }
@@ -3485,6 +3517,12 @@
       color: var(--color-white, rgba(255, 255, 255, 1));
       margin-top: 1.25rem;
       background-color: var(--color-darkest, rgba(48, 35, 29, 1));
+      @media print {
+        margin-top: 1.25rem;
+      }
+      @media print {
+        background-color: var(--color-darkest, rgba(48, 35, 29, 1));
+      }
     }
   }
   .identity-contact {
@@ -4821,7 +4859,7 @@
     border-color: var(--color-input, var(--input));
     background-color: transparent;
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     padding-inline: .5rem;
     padding-block: .25rem;
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
@@ -5818,7 +5856,7 @@
   }
   .navbar-items {
     display: flex;
-    flex: 5;
+    flex: 6;
     align-items: center;
     justify-content: space-around;
     gap: calc(var(--spacing, 0.25rem) * 8);

@@ -4,7 +4,8 @@ import React, {JSX, useRef} from 'react';
 
 import useSticky from "@/lib/utils/use-sticky";
 import Switch from "@/components/button/switch/switch";
-import {TerminalWindowIcon} from "@phosphor-icons/react";
+import {ReadCvLogoIcon, TerminalWindowIcon} from "@phosphor-icons/react";
+import {useCssVar} from "@/lib/utils/use-others";
 
 
 export type NavigationItem = {
@@ -15,6 +16,8 @@ export type NavigationItem = {
 const Navbar = (): JSX.Element => {
     const elementRef = useRef<HTMLElement>(null);
     const isSticky: boolean = useSticky(elementRef);
+
+    const PURPLE = useCssVar('PURPLE');
 
     return (
         <header className={'navbar'} ref={elementRef} data-sticky={isSticky}>
@@ -43,7 +46,7 @@ const Navbar = (): JSX.Element => {
                     <Switch sticky={true}/>
                 </div>
                 <a href={'/cv'} className={'hover:text-primary max-md:hidden'}>
-                    CV
+                    <ReadCvLogoIcon size={'1.5rem'} color={PURPLE} />
                 </a>
             </div>
         </header>

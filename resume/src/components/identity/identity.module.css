@@ -15,17 +15,16 @@
 
     /* section */
     .identity-info {
-        @apply w-[30rem] ml-[20rem];
+        @apply w-[34rem] ml-[20rem];
         @apply flex flex-col flex-1 gap-y-[.25rem] items-start justify-start;
         @apply mb-[8rem];
-        @apply print:w-[20rem] print:ml-[15rem];
-
+        @apply print:w-[17rem] print:ml-[12rem];
 
         /* h2 */
         .identity-name {
-            @apply w-[30rem] mb-[2rem] text-[2.5rem] text-darkest font-black text-center;
+            @apply w-[34rem] mb-[2rem] text-[2.5rem] text-darkest font-black text-center;
             @apply justify-self-center self-baseline;
-            @apply print:w-[15rem];
+            @apply print:w-[25rem];
 
             span {
                 @apply inline-block font-light;
@@ -43,6 +42,7 @@
     /* div */
     .identity-avatar {
         @apply inline-block relative justify-self-center;
+        @apply print:ml-[5rem];
     }
 
     /* div */
@@ -53,6 +53,7 @@
     /* div */
     .identity-location {
         @apply inline-flex flex-row gap-y-0 gap-x-0 w-auto;
+        @apply print:ml-[6rem];
 
         /* span */
         .identity-pin {
@@ -70,7 +71,7 @@
             @apply text-[2rem] w-[17.5rem] justify-center self-center;
             @apply text-white font-medium p-[0.5rem_1.25rem_0.5rem_0.5rem];
             @apply bg-darkest mt-[1.25rem];
-            @apply print:bg-darkest;
+            @apply print:bg-darkest print:mt-[1.25rem];
         }
 
     }
