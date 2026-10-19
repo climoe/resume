@@ -8,14 +8,14 @@
 
     /* div */
     .identity {
-        @apply w-[100rem] mt-16;
+        @apply w-[100rem] m-[5rem_auto_0rem];
         @apply flex flex-row flex-2 gap-x-60;
         @apply print:m-[0] print:p-[0] print:w-[60rem];
     }
 
     /* section */
     .identity-info {
-        @apply w-[34rem] ml-[20rem];
+        @apply w-[34rem];
         @apply flex flex-col flex-1 gap-y-[.25rem] items-start justify-start;
         @apply mb-[8rem];
         @apply print:w-[17rem] print:ml-[12rem];
@@ -23,7 +23,7 @@
         /* h2 */
         .identity-name {
             @apply w-[34rem] mb-[2rem] text-[2.5rem] text-darkest font-black text-center;
-            @apply justify-self-center self-baseline;
+            @apply self-center;
             @apply print:w-[25rem];
 
             span {
@@ -120,13 +120,13 @@
         @apply text-2xl pl-[1.5rem];
         @apply flex flex-col content-start justify-center;
 
-        h3 {
-            @apply mt-4 ml-4 indent-10 font-light;
-        }
-
         h2 {
             @apply text-4xl text-center;
             @apply font-black mt-4 mb-8;
+        }
+
+        h3 {
+            @apply m-[2rem_4rem_4rem_4rem] indent-10 font-light;
         }
     }
 }

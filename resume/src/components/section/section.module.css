@@ -40,7 +40,7 @@
 
     /* section */
     .vite {
-        @apply flex-[1_0_50%] flex-col m-[0_4rem] mt-[4rem] p-[2rem] bg-white backdrop-blur-xs rounded-[.8rem];
+        @apply w-[150rem] flex-[1_0_50%] flex-col m-[0_4rem] mt-[4rem] p-[2rem] bg-white backdrop-blur-xs rounded-[.8rem];
         @apply lg:mt-[2rem] lg:flex-[1_1_100%];
         @apply print:mt-[0] print:p-[0];
         @apply hover:bg-white;

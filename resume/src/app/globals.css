@@ -3390,7 +3390,7 @@
 }
 @layer components {
   .identity {
-    margin-top: calc(var(--spacing, 0.25rem) * 16);
+    margin: 5rem auto 0rem;
     width: 100rem;
     display: flex;
     flex: 2;
@@ -3407,7 +3407,6 @@
     }
   }
   .identity-info {
-    margin-left: 20rem;
     width: 34rem;
     display: flex;
     flex: 1;
@@ -3430,8 +3429,7 @@
       --tw-font-weight: var(--font-weight-black, 900);
       font-weight: var(--font-weight-black, 900);
       color: var(--color-darkest, rgba(48, 35, 29, 1));
-      align-self: baseline;
-      justify-self: center;
+      align-self: center;
       @media print {
         width: 25rem;
       }
@@ -3580,13 +3578,6 @@
     flex-direction: column;
     align-content: flex-start;
     justify-content: center;
-    h3 {
-      margin-top: calc(var(--spacing, 0.25rem) * 4);
-      margin-left: calc(var(--spacing, 0.25rem) * 4);
-      text-indent: calc(var(--spacing, 0.25rem) * 10);
-      --tw-font-weight: var(--font-weight-light, 300);
-      font-weight: var(--font-weight-light, 300);
-    }
     h2 {
       text-align: center;
       font-size: var(--text-4xl, 2.25rem);
@@ -3595,6 +3586,12 @@
       margin-bottom: calc(var(--spacing, 0.25rem) * 8);
       --tw-font-weight: var(--font-weight-black, 900);
       font-weight: var(--font-weight-black, 900);
+    }
+    h3 {
+      margin: 2rem 4rem 4rem 4rem;
+      text-indent: calc(var(--spacing, 0.25rem) * 10);
+      --tw-font-weight: var(--font-weight-light, 300);
+      font-weight: var(--font-weight-light, 300);
     }
   }
 }
@@ -3656,6 +3653,7 @@
   .vite {
     margin: 0 4rem;
     margin-top: 4rem;
+    width: 150rem;
     flex: 1 0 50%;
     flex-direction: column;
     border-radius: .8rem;
@@ -5835,7 +5833,7 @@
     position: sticky;
     top: calc(var(--spacing, 0.25rem) * 0);
     z-index: 50;
-    width: 120rem;
+    width: 150rem;
     background-color: var(--color-background, var(--background));
     @media print {
       display: none;
