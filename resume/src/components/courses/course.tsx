@@ -19,8 +19,9 @@ export default function Course({ name, owner, description, realized } : {name: s
 				</i>
 			)}
 			<p className={"course-name"}>
-				{name} - <span className={"course-description"}>{description}</span>
-				<span className={"course-owner"}>{owner}</span>
+				{name}
+				<span className={"course-description"}> - {description}</span>
+				<span className={"course-owner"}> - {owner}</span>
 			</p>
 		</article>
 	);

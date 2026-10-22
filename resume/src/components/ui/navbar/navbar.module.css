@@ -5,7 +5,7 @@
 
     /* header */
     .navbar {
-        @apply w-[150rem] bg-background sticky top-0 z-50;
+        @apply w-[160rem] bg-background sticky top-0 z-50;
         @apply print:hidden;
     }
 
