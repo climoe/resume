@@ -24,7 +24,7 @@
         .identity-name {
             @apply w-[34rem] mb-[2rem] text-[2.5rem] text-darkest font-black text-center;
             @apply self-center;
-            @apply print:w-[25rem];
+            @apply print:w-[25rem] print:ml-[6rem] print:text-darkest;
 
             span {
                 @apply inline-block font-light;

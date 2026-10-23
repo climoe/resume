@@ -4,7 +4,7 @@ import React, {JSX, useRef} from 'react';
 
 import useSticky from "@/lib/utils/use-sticky";
 import Switch from "@/components/button/switch/switch";
-import {ReadCvLogoIcon, TerminalWindowIcon} from "@phosphor-icons/react";
+import {NewspaperClippingIcon, TerminalWindowIcon} from "@phosphor-icons/react";
 import {useCssVar} from "@/lib/utils/use-others";
 
 
@@ -46,7 +46,7 @@ const Navbar = (): JSX.Element => {
                     <Switch sticky={true}/>
                 </div>
                 <a href={'/cv'} className={'hover:text-primary max-md:hidden'}>
-                    <ReadCvLogoIcon size={'1.5rem'} color={PURPLE} />
+                    <NewspaperClippingIcon size={'1.5rem'} color={PURPLE} />
                 </a>
             </div>
         </header>
