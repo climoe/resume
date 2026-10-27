@@ -45,7 +45,7 @@ const Footer = ({ handlePrint }: { handlePrint: () => void}) => {
                     <span>and <HeartIcon size={'2rem'} color={PURPLE}/>for better web.</span>
                 </span>
                 <span className='footer-copyright'>
-                    <span className={'footer-rights'}>{`©${new Date().getFullYear()}`}climoe. All rights reserved.</span>
+                    <span className={'footer-rights'}>{`©${new Date().getFullYear()}`} climoe. All rights reserved.</span>
                     <PrinterIcon className={'footer-printer'} size={'2rem'} onClick={handlePrint}/>
                 </span>
             </div>
