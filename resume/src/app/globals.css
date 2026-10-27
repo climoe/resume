@@ -2480,7 +2480,7 @@
   .vite {
     margin: 0 4rem;
     margin-top: 4rem;
-    width: 140rem;
+    width: 150rem;
     flex: 1 0 50%;
     flex-direction: column;
     padding: 2rem;
@@ -4578,7 +4578,7 @@
     position: sticky;
     top: 0px;
     z-index: 50;
-    width: 150rem;
+    width: 160rem;
     background-color: var(--color-background, var(--background));
     @media print {
       display: none;
@@ -4623,7 +4623,6 @@
     background-color: transparent;
     align-self: center;
     .logo {
-      cursor: pointer;
       border-radius: 50%;
       --tw-gradient-position: 90deg;
       @supports (background-image: linear-gradient(in lab, red, red)) {
@@ -4636,6 +4635,7 @@
       --tw-gradient-to: var(--color-purple, rgba(121, 59, 238, 1));
       --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
       --tw-gradient-to-position: 100%;
+      cursor: pointer;
       color: var(--color-darkest, rgba(48, 35, 29, 1));
       text-decoration-line: none;
       animation: var(--animate-rotate, rotate 0.7s ease-in-out 0.5s);

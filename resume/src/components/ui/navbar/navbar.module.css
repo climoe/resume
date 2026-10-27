@@ -5,7 +5,7 @@
 
     /* header */
     .navbar {
-        @apply w-[150rem] bg-background sticky top-0 z-50;
+        @apply w-[160rem] bg-background sticky top-0 z-50;
         @apply print:hidden;
     }
 
@@ -24,7 +24,8 @@
 
         /* a */
         .logo {
-            @apply rounded-[50%] bg-linear-90 from-pink from-0% to-purple to-100% text-darkest cursor-pointer no-underline;
+            @apply rounded-[50%] bg-linear-90 from-pink from-0% to-purple to-100%;
+            @apply text-darkest cursor-pointer no-underline;
             @apply animate-rotate;
         }
 
