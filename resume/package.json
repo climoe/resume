@@ -8,7 +8,7 @@
     "clear": "rm -rf ./.next && npm run empty-files",
     "empty-files": "truncate -s 0 ./src/app/globals.css && truncate -s 0 ./dist/styles/globals.css",
     "next": "next dev --turbo",
-    "build": " npm run tailwind-cli && next build",
+    "build": "npm run tailwind-cli && npm run css-copy && next build",
     "start": "next start",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
